@@ -4,6 +4,7 @@ import 'package:amina/Resources/string_resources.dart';
 import 'package:amina/Reusable_components/auth_data_field.dart';
 import 'package:amina/Reusable_components/large_button.dart';
 import 'package:amina/Reusable_components/text_widget.dart';
+import 'package:amina/View/auth/otp_view.dart';
 import 'package:amina/View/home/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -99,7 +100,7 @@ class _RegisterViewState extends State<RegisterView> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const HomeView(),
+                                  builder: (context) => OtpView(),
                                 ),
                               );
                             }),
