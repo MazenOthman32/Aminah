@@ -2,6 +2,7 @@ import 'package:amina/Resources/assets_resources.dart';
 import 'package:amina/Resources/color_resources.dart';
 import 'package:amina/view/on_boarding/on_boarding_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
 import 'dart:async';
 
@@ -17,7 +18,7 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     super.initState();
     Timer(
-      Duration(seconds: 7),
+      const Duration(seconds: 7),
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -29,27 +30,23 @@ class _SplashViewState extends State<SplashView> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: ColorsManager.white,
       body: SafeArea(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Center(
-                child: Lottie.asset(
-                  AssetsResource.LogoLottie,
-                  fit: BoxFit.cover,
-                  width: 400,
-                  height: 400,
-                  repeat: true,
-                ),
+              const SizedBox(),
+              Lottie.asset(
+                AssetsResource.LogoLottie,
+                width: 300.w,
+                height: 300.h,
               ),
-              const Center(
+              Center(
                 child: Padding(
-                  padding: EdgeInsets.only(bottom: 25),
-                  child: CircularProgressIndicator(
+                  padding: EdgeInsets.only(bottom: 50.h),
+                  child: const CircularProgressIndicator(
                     color: ColorsManager.primary,
                   ),
                 ),

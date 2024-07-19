@@ -1,4 +1,3 @@
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'color_resources.dart';
 import 'package:flutter/material.dart';
 import 'font_resources.dart';

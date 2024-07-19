@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FontResources {
-  static const String fontFamily = 'Inter';
+  static const String fontFamily = 'BalooBhaijaan2';
 }
 
 // Manages font weight for every type of the font family.

@@ -1,5 +1,6 @@
+import 'package:amina/Resources/font_resources.dart';
 import 'package:amina/reusable_components/text_widget.dart';
-import '../../resources/text_style_resources.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import '../resources/color_resources.dart';
 
@@ -8,47 +9,58 @@ class LargeButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final Color buttonColor;
   final Color fontColor;
-  final double fontSize;
-  final double borderRadius;
-
+  final double topPadding;
+  final double bottomPadding;
+  final double leftPadding;
+  final double rightPadding;
+  final double? fontSize;
+  final double? borderRadius;
+  final String fontFamily;
   const LargeButton({
     super.key,
     required this.text,
     required this.onPressed,
-    this.fontColor = Colors.white,
+    this.fontColor = ColorsManager.white,
     this.buttonColor = ColorsManager.primary,
-    this.fontSize = 15,
-    this.borderRadius = 12,
+    this.fontSize,
+    this.borderRadius,
+    this.topPadding = 0,
+    this.bottomPadding = 0,
+    this.leftPadding = 0,
+    this.rightPadding = 0,
+    this.fontFamily = FontResources.fontFamily,
   });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 250,
-      height: 50,
+      width: 250.w,
+      height: 50.h,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 32),
+        padding: EdgeInsets.only(
+          top: topPadding,
+          right: rightPadding,
+          left: leftPadding,
+          bottom: bottomPadding,
+        ),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             backgroundColor: buttonColor,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(borderRadius),
+              borderRadius: BorderRadius.circular(borderRadius ?? 12.r),
             ),
           ),
           onPressed: onPressed,
-          child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 16),
-            child: Align(
-              alignment: AlignmentDirectional.center,
-              child: TextWidget(
+          child: Align(
+            alignment: AlignmentDirectional.center,
+            child: TextWidget(
                 text: text,
                 textAlign: TextAlign.center,
-                textStyle: getSemiBoldStyle(
+                textStyle: TextStyle(
                   fontSize: fontSize,
                   color: fontColor,
-                ),
-              ),
-            ),
+                  fontFamily: fontFamily,
+                )),
           ),
         ),
       ),

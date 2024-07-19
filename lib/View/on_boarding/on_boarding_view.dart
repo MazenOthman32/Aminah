@@ -1,21 +1,21 @@
-import 'package:amina/resources/assets_resources.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/widgets.dart';
+import 'package:amina/Reusable_components/animated_slider.dart';
+import '../../Resources/assets_resources.dart';
 import '../../Resources/string_resources.dart';
 import 'package:flutter/material.dart';
 import '../../Reusable_components/large_button.dart';
+import '../../Reusable_components/text_widget.dart';
 import '../../resources/color_resources.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../auth/login_view.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnBoardingView extends StatefulWidget {
-  OnBoardingView({super.key});
+  const OnBoardingView({super.key});
   @override
   State<OnBoardingView> createState() => _OnBoardingViewState();
 }
 
-final List onBoardingData = [
+List onBoardingData = [
   {
     "image": AssetsResource.ThirdOnBoardingSVG,
     "title": StringsManager.onBoardingThirdTitle,
@@ -38,7 +38,6 @@ class _OnBoardingViewState extends State<OnBoardingView> {
     initialPage: onBoardingData.length - 1,
     keepPage: true,
   );
-
   skipMethod() {
     Navigator.of(context).pushAndRemoveUntil(
         MaterialPageRoute(builder: (context) => const LoginView()),
@@ -52,104 +51,87 @@ class _OnBoardingViewState extends State<OnBoardingView> {
     });
   }
 
+  @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
-    var width = MediaQuery.of(context).size.width;
-    return ScreenUtilInit(
-      minTextAdapt: true,
-      splitScreenMode: true,
-      designSize: Size(width, height),
-      child: Scaffold(
+    return Scaffold(
+      backgroundColor: ColorsManager.backGroundColor,
+      appBar: AppBar(
+        elevation: 0,
         backgroundColor: ColorsManager.backGroundColor,
-        appBar: AppBar(
-          elevation: 0,
-          backgroundColor: Colors.transparent,
-          actions: [
-            Padding(
-              padding: const EdgeInsets.only(right: 16),
-              child: TextButton(
-                style: TextButton.styleFrom(
-                    backgroundColor: ColorsManager.primary),
-                onPressed: skipMethod,
-                child: Text(
-                  StringsManager.skip,
-                  style: TextStyle(color: ColorsManager.white),
-                ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 16),
+            child: TextButton(
+              style:
+                  TextButton.styleFrom(backgroundColor: ColorsManager.primary),
+              onPressed: skipMethod,
+              child: const TextWidget(
+                text: StringsManager.skip,
               ),
             ),
-          ],
-        ),
-        body: Stack(
-          children: [
-            PageView.builder(
-              scrollDirection: Axis.horizontal,
-              controller: pageController,
-              itemCount: onBoardingData.length,
-              onPageChanged: onChanged,
-              itemBuilder: (context, index) {
-                return Column(
-                  children: [
-                    SvgPicture.asset(
-                      onBoardingData[index]['image'],
-                      fit: BoxFit.cover,
-                    ),
-                    SizedBox(
-                      child: Text(
-                        onBoardingData[index]['title'],
-                        style:
-                            TextStyle(fontSize: 20, color: ColorsManager.black),
-                      ),
-                      height: 30.h,
-                    ),
-                    Text(
-                      onBoardingData[index]['description'],
-                      style:
-                          TextStyle(fontSize: 20, color: ColorsManager.black),
-                    ),
-                  ],
-                );
-              },
-            ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 50),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
+          ),
+        ],
+      ),
+      body: Stack(
+        children: [
+          PageView.builder(
+            scrollDirection: Axis.horizontal,
+            controller: pageController,
+            itemCount: onBoardingData.length,
+            onPageChanged: onChanged,
+            itemBuilder: (context, index) {
+              return Column(
                 children: [
-                  (currentPage == 0)
-                      ? LargeButton(
-                          onPressed: skipMethod,
-                          text: StringsManager.Continue,
-                        )
-                      : Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: List<Widget>.generate(
-                            onBoardingData.length,
-                            (index) {
-                              return AnimatedContainer(
-                                duration: const Duration(
-                                  milliseconds: 200,
-                                ),
-                                height: 10,
-                                width: (index == currentPage) ? 15 : 10,
-                                margin: const EdgeInsets.symmetric(
-                                  horizontal: 5,
-                                ),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(5),
-                                    color: (index == currentPage)
-                                        ? ColorsManager.primary
-                                        : ColorsManager
-                                            .boardingSliderPointsColor),
-                              );
-                            },
-                          ),
-                        ),
+                  SvgPicture.asset(
+                    onBoardingData[index]['image'],
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox(
+                    height: 54.h,
+                    child: TextWidget(
+                      text: onBoardingData[index]['title'],
+                      color: ColorsManager.black,
+                      fontsize: 20.sp,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextWidget(
+                    text: onBoardingData[index]['description'],
+                    color: ColorsManager.black,
+                    fontsize: 14.sp,
+                  ),
                 ],
-              ),
-            )
-          ],
-        ),
+              );
+            },
+          ),
+          Padding(
+            padding: EdgeInsets.only(bottom: 30.h),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                (currentPage == 0)
+                    ? LargeButton(
+                        leftPadding: 16.w,
+                        rightPadding: 16.w,
+                        fontSize: 16.sp,
+                        onPressed: skipMethod,
+                        text: StringsManager.Continue,
+                      )
+                    : Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: List<Widget>.generate(
+                          onBoardingData.length,
+                          (index) {
+                            return AnimatedSlider(
+                                index: index, currentPage: currentPage);
+                          },
+                        ),
+                      ),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }

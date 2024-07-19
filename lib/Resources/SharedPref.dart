@@ -3,13 +3,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 class SharedPrefUtils {
   static check() async {
     final SharedPreferences pref = await SharedPreferences.getInstance();
-    bool check = await pref.containsKey("access_token");
+    bool check = pref.containsKey("access_token");
     return check;
   }
 
   static checkLanguage() async {
     final SharedPreferences pref = await SharedPreferences.getInstance();
-    bool check = await pref.containsKey("language");
+    bool check = pref.containsKey("language");
     return check;
   }
 
