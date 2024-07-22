@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'view/on_boarding/splash_view.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+
 void main() async {
   runApp(
     const Amina(),
@@ -22,8 +23,11 @@ class Amina extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return const MaterialApp(
-          home: SplashView(),
           debugShowCheckedModeBanner: false,
+          home: Directionality(
+            textDirection: TextDirection.rtl,
+            child: SplashView(),
+          ),
         );
       },
     );

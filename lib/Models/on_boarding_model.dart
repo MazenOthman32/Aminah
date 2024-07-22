@@ -1,23 +1,8 @@
+class OnBoardingModel {
+  final String image;
+  final String title;
+  final String description;
 
-import '../Resources/assets_resources.dart';
-import '../Resources/string_resources.dart';
-
-class OnBoardingData {
-  final List onBoardingData = [
-    {
-      "image": AssetsResource.ThirdOnBoardingSVG,
-      "title": StringsManager.onBoardingThirdTitle,
-      "description": StringsManager.onBoardingThridDescription,
-    },
-    {
-      "image": AssetsResource.SecondOnBoardingSVG,
-      "title": StringsManager.onBoardingSecondTitle,
-      "description": StringsManager.onBoardingSecondDescription,
-    },
-    {
-      "image": AssetsResource.FirstOnBoardingSVG,
-      "title": StringsManager.onBoardingFirstTitle,
-      "description": StringsManager.onBoardingFirstDescription,
-    },
-  ];
+  OnBoardingModel(
+      {required this.image, required this.title, required this.description});
 }

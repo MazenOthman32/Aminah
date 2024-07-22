@@ -18,11 +18,15 @@ class StringsManager {
   static const PhoneNumberHint = "رقم الهاتف";
   static const OtpSendingBtn = "إرسال رمز الأمان";
   static const FillTheOTP = "قم بإدخال رمز الامان";
-  static const CheckAndFillTheOTP =
+  static const CheckAndFillTheOTPNumber =
       "من فضلك قم بإدخال رمز الأمان الذي تم إرساله إلى رقم هاتفك ";
+  static const CheckAndFillTheOTPMail =
+      "من فضلك قم بإدخال رمز الأمان الذي تم إرساله إلى بريدك الإكرتوني ";
+
   static const OTPVerifiedSuccessfully = "تم إنشاء حساب بنجاح !";
   static const InvalidOTP = "رمز الأمان خاطئ يرجى إعادة المحاولة";
   static const GoToHomePage = "الصفحة الرئيسية";
   static const PleaseTryAgain = "أعد المحاولة";
   static const ReSend = "إعادة إرسال خلال ";
+  static const OTP_Varification = 'تأكيد رمز الأمان';
 }
