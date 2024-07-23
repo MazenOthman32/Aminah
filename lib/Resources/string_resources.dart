@@ -29,4 +29,14 @@ class StringsManager {
   static const PleaseTryAgain = "أعد المحاولة";
   static const ReSend = "إعادة إرسال خلال ";
   static const OTP_Varification = 'تأكيد رمز الأمان';
+  static const Continue_To_Map = 'متابعة على الخريطة';
+  static const LocationVarify1 =
+      'مرحبا اميرة, نود إعلامك أن مزود الخدمة قد تحرك من مكانه في الطريق إليك';
+  static const LocationVarify2 =
+      'يرجى التأكد من تواجدك في الموقع المحدد والإستعداد لإستقبال مزود الخدمة';
+  static const HomeNavBarIcon = 'الرئيسية';
+  static const TalabatyNavBarIcon = 'طلباتي';
+  static const WalletNavBarIcon = 'المحفظة';
+  static const ProfileNavBarIcon = 'حسابي';
+  static const Hi_User = 'مرحبا أميرة👋';
 }

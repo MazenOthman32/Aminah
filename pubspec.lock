@@ -121,6 +121,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.18.0"
+  convex_bottom_bar:
+    dependency: "direct main"
+    description:
+      name: convex_bottom_bar
+      sha256: ebf0f3deb1e8e99374d844fee7485d2980ec502dedfaad395c12118477933aef
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.2.0"
   crypto:
     dependency: transitive
     description:
@@ -231,7 +239,7 @@ packages:
     source: hosted
     version: "0.13.1"
   flutter_localizations:
-    dependency: transitive
+    dependency: "direct main"
     description: flutter
     source: sdk
     version: "0.0.0"
@@ -349,6 +357,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
+  localization:
+    dependency: "direct main"
+    description:
+      name: localization
+      sha256: "9fa21644b75ca3fe844f8f115d03cd6fdc675054dd9aab6c5de5861145ea57b5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.1"
   lottie:
     dependency: "direct main"
     description:

@@ -3,20 +3,21 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
 import '../Resources/font_resources.dart';
 import '../Reusable_components/large_button.dart';
-import '../View/home/home_view.dart';
+import '../View/home/bottom_navbar_view.dart';
 
 class BottomSheetContent extends StatelessWidget {
   final String message;
   final String lottie;
   final bool isSuccess;
   final String buttonMessage;
+  final Widget targetScreen;
 
   const BottomSheetContent({
     super.key,
     required this.buttonMessage,
     required this.message,
     required this.lottie,
-    required this.isSuccess,
+    required this.isSuccess, required this.targetScreen,
   });
 
   @override
@@ -50,7 +51,7 @@ class BottomSheetContent extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => HomeView(),
+                        builder: (context) => targetScreen,
                       ),
                     );
                   },

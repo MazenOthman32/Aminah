@@ -1,3 +1,4 @@
+import 'package:amina/View/home/bottom_navbar_view.dart';
 import 'package:flutter/material.dart';
 import '../Models/otp_model.dart';
 import '../Resources/assets_resources.dart';
@@ -34,6 +35,7 @@ class OtpViewModel with ChangeNotifier {
           message: bottomSheetString,
           lottie: bottomSheetLottie,
           isSuccess: entered,
+          targetScreen: BottomNavBarView(),
         );
       },
     );

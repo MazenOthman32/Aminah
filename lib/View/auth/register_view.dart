@@ -6,8 +6,7 @@ import 'package:amina/Reusable_components/text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
-
-import '../on_boarding/register_view_model.dart';
+import '../../View_model/register_view_model.dart';
 
 class RegisterView extends StatelessWidget {
   const RegisterView({super.key});

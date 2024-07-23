@@ -3,6 +3,7 @@ import 'package:amina/Resources/color_resources.dart';
 import 'package:amina/Resources/string_resources.dart';
 import 'package:amina/Reusable_components/large_button.dart';
 import 'package:amina/Reusable_components/text_widget.dart';
+import 'package:amina/View/home/bottom_navbar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -75,7 +76,12 @@ class LogInOtpView extends StatelessWidget {
                         rightPadding: 24.w,
                         leftPadding: 24.w,
                         text: StringsManager.OTP_Varification,
-                        onPressed: () => viewModel.showBottomSheet(context),
+                        onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => BottomNavBarView(),
+                            )),
+                        // viewModel.showBottomSheet(context), ** Ask Omar If He Want Verify On Login OR Not **
                       );
                     },
                   ),

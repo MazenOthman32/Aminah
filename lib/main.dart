@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'view/on_boarding/splash_view.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() async {
   runApp(
@@ -23,11 +23,17 @@ class Amina extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return const MaterialApp(
+          locale: Locale('ar'),
+          supportedLocales: [
+            Locale('ar'), //
+          ],
+          localizationsDelegates: [
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
           debugShowCheckedModeBanner: false,
-          home: Directionality(
-            textDirection: TextDirection.rtl,
-            child: SplashView(),
-          ),
+          home: SplashView(),
         );
       },
     );

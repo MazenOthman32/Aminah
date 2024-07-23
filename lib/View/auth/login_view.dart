@@ -102,16 +102,19 @@ class LoginView extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
+                                const TextWidget(
+                                  text: StringsManager.NotHaveAnAcc,
+                                  color: ColorsManager.black,
+                                ),
+                                SizedBox(
+                                  width: 5.w,
+                                ),
                                 GestureDetector(
                                   child: const TextWidget(
                                     text: StringsManager.SignUpNewAcc,
                                     color: ColorsManager.Secondery,
                                   ),
                                   onTap: () => viewModel.signUp(context),
-                                ),
-                                const TextWidget(
-                                  text: StringsManager.NotHaveAnAcc,
-                                  color: ColorsManager.black,
                                 ),
                               ],
                             )

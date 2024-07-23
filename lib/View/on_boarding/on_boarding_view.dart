@@ -24,19 +24,17 @@ class OnBoardingView extends StatelessWidget {
             appBar: AppBar(
               elevation: 0,
               backgroundColor: ColorsManager.backGroundColor,
-              actions: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 16),
-                  child: TextButton(
-                    style: TextButton.styleFrom(
-                        backgroundColor: ColorsManager.primary),
-                    onPressed: () => viewModel.skipMethod(context),
-                    child: const TextWidget(
-                      text: StringsManager.skip,
-                    ),
+              title: Padding(
+                padding: const EdgeInsets.only(right: 16),
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                      backgroundColor: ColorsManager.primary),
+                  onPressed: () => viewModel.skipMethod(context),
+                  child: const TextWidget(
+                    text: StringsManager.skip,
                   ),
                 ),
-              ],
+              ),
             ),
             body: Stack(
               children: [
@@ -77,7 +75,8 @@ class OnBoardingView extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      (viewModel.currentPage == 0)
+                      (viewModel.currentPage ==
+                              viewModel.onBoardingData.length - 1)
                           ? LargeButton(
                               leftPadding: 16.w,
                               rightPadding: 16.w,

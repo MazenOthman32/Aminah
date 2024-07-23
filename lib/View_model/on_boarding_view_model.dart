@@ -7,9 +7,9 @@ import '../resources/string_resources.dart';
 class OnBoardingViewModel with ChangeNotifier {
   final List<OnBoardingModel> onBoardingData = [
     OnBoardingModel(
-      image: AssetsResource.ThirdOnBoardingSVG,
-      title: StringsManager.onBoardingThirdTitle,
-      description: StringsManager.onBoardingThridDescription,
+      image: AssetsResource.FirstOnBoardingSVG,
+      title: StringsManager.onBoardingFirstTitle,
+      description: StringsManager.onBoardingFirstDescription,
     ),
     OnBoardingModel(
       image: AssetsResource.SecondOnBoardingSVG,
@@ -17,18 +17,18 @@ class OnBoardingViewModel with ChangeNotifier {
       description: StringsManager.onBoardingSecondDescription,
     ),
     OnBoardingModel(
-      image: AssetsResource.FirstOnBoardingSVG,
-      title: StringsManager.onBoardingFirstTitle,
-      description: StringsManager.onBoardingFirstDescription,
+      image: AssetsResource.ThirdOnBoardingSVG,
+      title: StringsManager.onBoardingThirdTitle,
+      description: StringsManager.onBoardingThridDescription,
     ),
   ];
 
   PageController pageController = PageController(
-    initialPage: 2,
+    initialPage: 0,
     keepPage: true,
   );
 
-  int currentPage = 2;
+  int currentPage = 0;
 
   void skipMethod(BuildContext context) {
     Navigator.of(context).pushAndRemoveUntil(
