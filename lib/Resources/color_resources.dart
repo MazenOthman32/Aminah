@@ -13,5 +13,6 @@ class ColorsManager {
   static const Color lightPrimary = Color(0xffF6BBD1);
   static const Color SignInContainerColor = Color(0xffc8dee0);
   static const Color Secondery = Color(0xffF38193);
+  static const Color RateStarsColor = Color(0xffe5a240);
   static const Color AuthDataFieldBorder = Color(0xffDCDCDC);
 }

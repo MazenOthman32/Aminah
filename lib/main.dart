@@ -1,5 +1,7 @@
 import 'package:amina/View/on_boarding/on_boarding_view.dart';
+import 'package:amina/View_model/day_order_view_model.dart';
 import 'package:amina/View_model/on_boarding_view_model.dart';
+import 'package:amina/View_model/otp_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -27,6 +29,8 @@ class Amina extends StatelessWidget {
           providers: [
             ChangeNotifierProvider(create: (_) => OfferCardViewModel()),
             ChangeNotifierProvider(create: (_) => OnBoardingViewModel()),
+            ChangeNotifierProvider(create: (_) => OtpViewModel()),
+            ChangeNotifierProvider(create: (_) => DayOrderViewModel()),
           ],
           child: MaterialApp(
             locale: Locale('ar'),

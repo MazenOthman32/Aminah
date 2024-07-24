@@ -11,8 +11,10 @@ import '../../Reusable_components/order_card.dart';
 import '../../Reusable_components/small_Icon_button.dart';
 import '../../Reusable_components/text_widget.dart';
 import '../../Reusable_components/user_avatar.dart';
+import '../../View_model/day_order_view_model.dart';
 import 'location_check_card.dart';
 import 'offer_list_view.dart';
+import 'order_list_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -36,6 +38,7 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 
+  final viewModel = DayOrderViewModel();
   List<UserAvatar> kids = [
     UserAvatar(
       imagePath: AssetsResource.Kid_1_Png,
@@ -172,6 +175,14 @@ class _HomeViewState extends State<HomeView> {
                     ),
                   ],
                 ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(10.0.r),
+              child: SizedBox(
+                child: DayOrderListView(),
+                width: 400,
+                height: 210.h,
               ),
             ),
           ],

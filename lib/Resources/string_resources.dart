@@ -47,4 +47,6 @@ class StringsManager {
   static const OfferDetails3 = 'إستخدمي كود #amina3 وإحصلي على خصم 10 %';
   static const OrderButton1 = 'إطلب جليسة أطفال';
   static const OrderButton2 = ' إحجز حضانة منزلية';
+  static const OrderStatusSucsses = 'لقد وصلت الجليسة';
+  static const OrderStatusInvalid = 'لم تصل الجليسة';
 }
