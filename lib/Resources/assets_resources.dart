@@ -20,6 +20,7 @@ class AssetsResource {
   static String Kid_3_Png = "assets/Images/Png/Malik.png";
   static String Kid_4_Png = "assets/Images/Png/Selem.png";
   static String MessageSVG = "assets/Images/Png/message.svg";
+  static String OfferCardPng = "assets/Images/Png/OfferCardPhoto.png";
   static String NotificationSVG = "assets/Images/Png/notification.svg";
   static String SelectedFrameSVG = "assets/Images/Png/Selected_Frame.svg";
   static String UnSelectedFrameSVG = "assets/Images/Png/UnSelected_Frame.svg";

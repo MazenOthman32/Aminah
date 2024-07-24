@@ -39,4 +39,12 @@ class StringsManager {
   static const WalletNavBarIcon = 'المحفظة';
   static const ProfileNavBarIcon = 'حسابي';
   static const Hi_User = 'مرحبا أميرة👋';
+  static const DiscountText1 = 'خصم 50% الآن';
+  static const OfferDetails1 = 'إستخدمي كود #amina1 وإحصلي على خصم 50 %';
+  static const DiscountText2 = 'خصم 30% الآن';
+  static const OfferDetails2 = 'إستخدمي كود #amina2 وإحصلي على خصم 30 %';
+  static const DiscountText3 = 'خصم 10% الآن';
+  static const OfferDetails3 = 'إستخدمي كود #amina3 وإحصلي على خصم 10 %';
+  static const OrderButton1 = 'إطلب جليسة أطفال';
+  static const OrderButton2 = ' إحجز حضانة منزلية';
 }

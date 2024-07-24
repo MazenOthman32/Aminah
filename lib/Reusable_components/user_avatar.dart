@@ -1,13 +1,18 @@
+import 'package:amina/Resources/assets_resources.dart';
 import 'package:amina/Resources/color_resources.dart';
+import 'package:amina/Reusable_components/text_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class UserAvatar extends StatelessWidget {
   final String imagePath;
   final String name;
   final bool isAddButton;
 
-  const UserAvatar({
+  UserAvatar({
     required this.imagePath,
     required this.name,
     this.isAddButton = false,
@@ -17,32 +22,52 @@ class UserAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          width: 60.w,
-          height: 60.h,
-          decoration: BoxDecoration(
-            color: isAddButton ? ColorsManager.OfWhite : Colors.transparent,
-            shape: BoxShape.circle,
-            border: Border.all(
-              color: Colors.grey,
-              width: 1.0.w,
+        GestureDetector(
+          onTap: isAddButton
+              ? () {
+                  print('123');
+                }
+              : () {
+                  print('456');
+                },
+          child: Container(
+            margin: EdgeInsets.symmetric(horizontal: 4.w),
+            width: 45.w,
+            height: 45.h,
+            decoration: BoxDecoration(
+              color: isAddButton ? ColorsManager.white : ColorsManager.OfWhite,
+              shape: BoxShape.circle,
+              border: Border.all(
+                color: isAddButton
+                    ? ColorsManager.med_grey
+                    : ColorsManager.OfWhite,
+                width: 1.0.w,
+              ),
             ),
-          ),
-          child: isAddButton
-              ? Icon(Icons.add, size: 30.sp)
-              : CircleAvatar(
-                  child: Image.asset(
-                    imagePath,
-                    fit: BoxFit.cover,
+            child: isAddButton
+                ? CircleAvatar(
+                    backgroundColor: ColorsManager.white,
+                    child: SvgPicture.asset(
+                      AssetsResource.add_SVG,
+                      width: 20.w,
+                      height: 20.h,
+                    ),
+                  )
+                : CircleAvatar(
+                    backgroundColor: ColorsManager.OfWhite,
+                    child: Image.asset(
+                      imagePath,
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                ),
+          ),
         ),
-        SizedBox(height: 8.h),
-        Text(
-          name,
-          style: TextStyle(
-            fontSize: 14.sp,
-            fontWeight: FontWeight.bold,
+        Padding(
+          padding: EdgeInsets.symmetric(vertical: 4.h),
+          child: TextWidget(
+            text: name,
+            fontsize: 12.sp,
+            color: ColorsManager.black,
           ),
         ),
       ],

@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
 import '../Resources/font_resources.dart';
 import '../Reusable_components/large_button.dart';
-import '../View/home/bottom_navbar_view.dart';
 
 class BottomSheetContent extends StatelessWidget {
   final String message;
@@ -17,14 +16,15 @@ class BottomSheetContent extends StatelessWidget {
     required this.buttonMessage,
     required this.message,
     required this.lottie,
-    required this.isSuccess, required this.targetScreen,
+    required this.isSuccess,
+    required this.targetScreen,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.all(16.0),
+      padding: EdgeInsets.all(16.0.r),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -32,19 +32,19 @@ class BottomSheetContent extends StatelessWidget {
           Text(
             message,
             style: TextStyle(
-              fontSize: 18.0,
+              fontSize: 18.0.sp,
               fontWeight: FontWeight.bold,
               fontFamily: FontResources.fontFamily,
             ),
           ),
-          SizedBox(height: 8.0),
+          SizedBox(height: 8.0.h),
           Lottie.asset(
             repeat: false,
             lottie,
             width: 100.w,
             height: 100.h,
           ),
-          SizedBox(height: 16.0),
+          SizedBox(height: 16.0.h),
           isSuccess
               ? LargeButton(
                   onPressed: () {
