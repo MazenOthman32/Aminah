@@ -10,16 +10,15 @@ class OfferButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 16.w),
-        height: 40.h,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          color: ColorsManager.backGroundColor,
-          borderRadius: BorderRadius.circular(15),
-        ),
+    return SizedBox(
+      height: 40.h,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.r),
+            ),
+            backgroundColor: ColorsManager.backGroundColor),
+        onPressed: onTap,
         child: Row(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -1,7 +1,6 @@
 import 'package:amina/Resources/color_resources.dart';
 import 'package:amina/Resources/font_resources.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextWidget extends StatelessWidget {
   final String text;

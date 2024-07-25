@@ -10,11 +10,7 @@ class InfoView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
-      body: OrderCard(
-        imagePath: AssetsResource.FirstOnBoardingSVG,
-        buttonText: 'إطلب جليسة اطفال',
-        onPressed: () {},
-      ),
+      body: Container(),
     );
   }
 }

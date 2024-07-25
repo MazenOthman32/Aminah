@@ -18,6 +18,10 @@ class DayOrderCard extends StatelessWidget {
         color: ColorsManager.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12.0.r),
+          side: BorderSide(
+            color: ColorsManager.med_grey,
+            style: BorderStyle.solid,
+          ),
         ),
         child: Padding(
           padding: EdgeInsets.all(10.0.r),

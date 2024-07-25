@@ -17,22 +17,16 @@ class SmallIconButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        // Notification Icon
-        GestureDetector(
-          onTap: onTap,
-          child: Container(
-            width: 45.w,
-            height: 45.h,
-            decoration: BoxDecoration(
-              color: ColorsManager.OfWhite,
-              shape: BoxShape.circle,
-            ),
-            child: Center(
-              child: SvgPicture.asset(
-                iconAsset,
-                width: 24.w,
-                height: 24.h,
-              ),
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            shape: CircleBorder(),
+          ),
+          onPressed: onTap,
+          child: Center(
+            child: SvgPicture.asset(
+              iconAsset,
+              width: 24.w,
+              height: 24.h,
             ),
           ),
         ),

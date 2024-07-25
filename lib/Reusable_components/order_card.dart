@@ -1,20 +1,15 @@
 import 'package:amina/Reusable_components/text_widget.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import '../Resources/color_resources.dart';
+import '../View_model/order_card_view_model.dart';
 
 class OrderCard extends StatelessWidget {
-  final String imagePath;
-  final String buttonText;
-  final VoidCallback onPressed;
+  final OrderCardViewModel viewModel;
 
   const OrderCard({
-    required this.imagePath,
-    required this.buttonText,
-    required this.onPressed,
+    required this.viewModel,
   });
 
   @override
@@ -26,9 +21,9 @@ class OrderCard extends StatelessWidget {
         height: MediaQuery.of(context).size.height / 6,
         child: Container(
           child: ElevatedButton(
-            onPressed: onPressed,
+            onPressed: viewModel.onPressed,
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.white,
+              backgroundColor: ColorsManager.white,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12.r),
               ),
@@ -37,12 +32,12 @@ class OrderCard extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               children: [
                 SvgPicture.asset(
-                  imagePath,
+                  viewModel.imagePath,
                 ),
                 Padding(
                   padding: EdgeInsets.only(bottom: 5.0.h),
                   child: TextWidget(
-                    text: buttonText,
+                    text: viewModel.buttonText,
                     color: ColorsManager.black,
                     fontsize: 12.sp,
                   ),

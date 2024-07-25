@@ -5,6 +5,7 @@ import '../../Resources/assets_resources.dart';
 import '../../Resources/font_resources.dart';
 import '../../Resources/string_resources.dart';
 import '../../Reusable_components/large_button.dart';
+import '../auth/test.dart';
 import 'info_view.dart';
 
 class LocationCheckCard extends StatelessWidget {
@@ -52,7 +53,7 @@ class LocationCheckCard extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => InfoView(),
+                  builder: (context) => MapPage(),
                 ),
               );
             },
