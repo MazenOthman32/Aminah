@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import 'View_model/babysitter_request_form_view_model.dart';
 import 'View_model/bottom_navbar_view_model.dart';
 import 'View_model/offer_card_view_model.dart';
 import 'view/on_boarding/splash_view.dart';
@@ -32,6 +33,7 @@ class Amina extends StatelessWidget {
             ChangeNotifierProvider(create: (_) => OtpViewModel()),
             ChangeNotifierProvider(create: (_) => DayOrderViewModel()),
             ChangeNotifierProvider(create: (_) => BottomNavBarViewModel()),
+            ChangeNotifierProvider(create: (_) => BabysitterRequestViewModel()),
           ],
           child: MaterialApp(
             locale: Locale('ar'),

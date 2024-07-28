@@ -1,3 +1,4 @@
+import 'package:amina/View/home/Order/babysitter_request_form_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../Resources/color_resources.dart';
@@ -74,7 +75,14 @@ class OfferCard extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(top: 10.0.h),
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => BabysitterRequestForm(),
+                          ),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.black,
                         backgroundColor: Colors.white,

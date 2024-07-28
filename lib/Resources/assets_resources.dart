@@ -36,8 +36,10 @@ class AssetsResource {
   static String UnSelectedWalletSVG = "assets/Images/Png/UnSelected_Wallet.svg";
   static String LocationLottie = "assets/Lottie/LocationLottie.json";
   static String DotsPng = "assets/Images/Png/dots.png";
-  static String CallenderSVG = "assets/Images/Png/calendar.svg";
+  static String CalenderSVG = "assets/Images/Png/calendar.svg";
   static String LayerSVG = "assets/Images/Png/layer.svg";
   static String MapSVG = "assets/Images/Png/map.svg";
   static String MoneySVG = "assets/Images/Png/money.svg";
+  static String CalendarPng = "assets/Images/Png/Calendar.png";
+  static String ClockPng = "assets/Images/Png/clock.png";
 }

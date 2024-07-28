@@ -102,7 +102,7 @@ class DayOrderCard extends StatelessWidget {
               SizedBox(height: 5.h),
               Row(
                 children: [
-                  SvgPicture.asset(AssetsResource.CallenderSVG),
+                  SvgPicture.asset(AssetsResource.CalenderSVG),
                   SizedBox(width: 5.w),
                   TextWidget(
                     text: '${dayOrder.timeFrom} - ${dayOrder.timeTo}',
