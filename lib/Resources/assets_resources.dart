@@ -42,4 +42,20 @@ class AssetsResource {
   static String MoneySVG = "assets/Images/Png/money.svg";
   static String CalendarPng = "assets/Images/Png/Calendar.png";
   static String ClockPng = "assets/Images/Png/clock.png";
+  static String BrokenPng = "assets/Images/Png/BrokenPhoto.png";
+  static String MalePng = "assets/Images/Png/Male.png";
+  static String FemalePng = "assets/Images/Png/Female.png";
+  static String FemaleSignPng = "assets/Images/Png/womanSign.png";
+  static String MaleSignPng = "assets/Images/Png/manSign.png";
+  static String FemaleSignSVG = "assets/Images/Png/FemaleSign.svg";
+  static String MaleSignSVG = "assets/Images/Png/MaleSign.svg";
+  static String MaleSVG = "assets/Images/Png/Male.svg";
+  static String FemaleSVG = "assets/Images/Png/Female.svg";
+  static String CashSVG = "assets/Images/Png/Cash.svg";
+  static String VisaSVG = "assets/Images/Png/Visa.svg";
+  static String MasterCardSVG = "assets/Images/Png/MasterCard.svg";
+  static String CashPNG = "assets/Images/Png/Cash.png";
+  static String VisaPNG = "assets/Images/Png/Visa.png";
+  static String MasterCardPNG = "assets/Images/Png/MasterCard.png";
+  static String CertificatePNG = "assets/Images/Png/Certificate.png";
 }

@@ -1,4 +1,4 @@
-import 'package:amina/Reusable_components/order_card.dart';
+import 'package:amina/Reusable_components/Cards/order_card.dart';
 import 'package:flutter/material.dart';
 
 import '../../Resources/assets_resources.dart';

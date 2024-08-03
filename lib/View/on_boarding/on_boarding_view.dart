@@ -1,13 +1,13 @@
 import 'package:amina/Resources/color_resources.dart';
 import 'package:amina/Resources/string_resources.dart';
-import 'package:amina/Reusable_components/animated_slider.dart';
-import 'package:amina/Reusable_components/large_button.dart';
-import 'package:amina/Reusable_components/text_widget.dart';
+import 'package:amina/Reusable_components/Slider/animated_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
+import '../../Reusable_components/Buttons/large_button.dart';
+import '../../Reusable_components/Helper_Widgets/text_widget.dart';
 import '../../View_model/on_boarding_view_model.dart';
 
 class OnBoardingView extends StatelessWidget {

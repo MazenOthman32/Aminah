@@ -1,13 +1,13 @@
 import 'package:amina/Resources/assets_resources.dart';
 import 'package:amina/Resources/color_resources.dart';
 import 'package:amina/Resources/string_resources.dart';
-import 'package:amina/Reusable_components/large_button.dart';
-import 'package:amina/Reusable_components/text_widget.dart';
+import 'package:amina/Reusable_components/Buttons/large_button.dart';
+import 'package:amina/Reusable_components/Helper_Widgets/text_widget.dart';
 import 'package:amina/View/home/bottom_navbar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
-import '../../Reusable_components/otp_pin_field.dart';
+import '../../Reusable_components/Fields/otp_pin_field.dart';
 import '../../View_model/otp_view_model.dart';
 
 class LogInOtpView extends StatelessWidget {

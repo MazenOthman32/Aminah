@@ -1,20 +1,24 @@
 import 'dart:async';
+import 'package:amina/View/home/Order/BabySitter_Order/babysitter_request_form_view.dart';
+import 'package:amina/View/home/Add_New_child/add_new_child.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import '../../Resources/assets_resources.dart';
 import '../../Resources/color_resources.dart';
 import '../../Resources/string_resources.dart';
-import '../../Reusable_components/number_of_offers.dart';
-import '../../Reusable_components/order_card.dart';
-import '../../Reusable_components/small_icon_button.dart';
-import '../../Reusable_components/text_widget.dart';
-import '../../Reusable_components/user_avatar.dart';
+import '../../Reusable_components/Buttons/small_Icon_button.dart';
+import '../../Reusable_components/Items/number_of_offers.dart';
+import '../../Reusable_components/Cards/order_card.dart';
+
+import '../../Reusable_components/Helper_Widgets/text_widget.dart';
+import '../../Reusable_components/Items/user_avatar.dart';
 import '../../View_model/order_card_view_model.dart';
 import '../../View_model/home_view_model.dart';
+import 'Order/Home_Nursery/home_nursery_form_view.dart';
 import 'location_check_card.dart';
-import 'offer_list_view.dart';
-import 'order_list_view.dart';
+import 'Offers/offer_list_view.dart';
+import 'Order/order_list_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -113,6 +117,13 @@ class _HomeViewState extends State<HomeView> {
                           UserAvatar(
                             imagePath: AssetsResource.Kid_1_Png,
                             name: '',
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => AddNewChildView(),
+                                  ));
+                            },
                             isAddButton: true,
                           ),
                         ],
@@ -144,16 +155,30 @@ class _HomeViewState extends State<HomeView> {
                     children: [
                       OrderCard(
                         viewModel: OrderCardViewModel(
-                          imagePath: AssetsResource.SecondOnBoardingSVG,
-                          buttonText: StringsManager.OrderButton2,
-                          onPressed: () {},
+                          imagePath: AssetsResource.FirstOnBoardingSVG,
+                          buttonText: StringsManager.OrderButton1,
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => BabysitterRequestForm(),
+                              ),
+                            );
+                          },
                         ),
                       ),
                       OrderCard(
                         viewModel: OrderCardViewModel(
                           imagePath: AssetsResource.ThirdOnBoardingSVG,
                           buttonText: StringsManager.OrderButton2,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HomeNurseryFormView(),
+                              ),
+                            );
+                          },
                         ),
                       ),
                     ],

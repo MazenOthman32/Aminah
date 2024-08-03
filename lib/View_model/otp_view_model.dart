@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../Models/otp_model.dart';
 import '../Resources/assets_resources.dart';
 import '../Resources/string_resources.dart';
-import '../Reusable_components/bottom_sheet.dart';
+import '../Reusable_components/Bottom_Sheets/bottom_sheet.dart';
 
 class OtpViewModel with ChangeNotifier {
   OtpModel _otpModel = OtpModel();

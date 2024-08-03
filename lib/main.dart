@@ -1,3 +1,4 @@
+import 'package:amina/View_model/child_selection_view_model.dart';
 import 'package:amina/View_model/day_order_view_model.dart';
 import 'package:amina/View_model/on_boarding_view_model.dart';
 import 'package:amina/View_model/otp_view_model.dart';
@@ -5,9 +6,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import 'View_model/another_payment_way_view_model.dart';
+import 'View_model/radio_button.dart';
 import 'View_model/babysitter_request_form_view_model.dart';
 import 'View_model/bottom_navbar_view_model.dart';
+import 'View_model/home_nursery_form_view_model.dart';
 import 'View_model/offer_card_view_model.dart';
+import 'View_model/offer_section_card_view_model.dart';
+import 'View_model/payment_view_model.dart';
+import 'View_model/place_order_view_model.dart';
 import 'view/on_boarding/splash_view.dart';
 
 void main() async {
@@ -34,6 +41,13 @@ class Amina extends StatelessWidget {
             ChangeNotifierProvider(create: (_) => DayOrderViewModel()),
             ChangeNotifierProvider(create: (_) => BottomNavBarViewModel()),
             ChangeNotifierProvider(create: (_) => BabysitterRequestViewModel()),
+            ChangeNotifierProvider(create: (_) => HomeNurseryFormViewModel()),
+            ChangeNotifierProvider(create: (_) => PlaceOrderViewModel()),
+            ChangeNotifierProvider(create: (_) => ChildSelectionViewModel()),
+            ChangeNotifierProvider(create: (_) => RadioButtonViewModel()),
+            ChangeNotifierProvider(create: (_) => OfferSectionCardViewModel()),
+            ChangeNotifierProvider(create: (_) => AnotherPaymentWayViewModel()),
+            ChangeNotifierProvider(create: (_) => PaymentViewModel()),
           ],
           child: MaterialApp(
             locale: Locale('ar'),

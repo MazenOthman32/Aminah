@@ -1,49 +1,49 @@
 import 'package:flutter/material.dart';
-import '../Models/babysitter_request_form_model.dart';
+import '../Models/babysitter_request_model.dart';
 
 class BabysitterRequestViewModel extends ChangeNotifier {
-  BabysitterRequest request = BabysitterRequest(
-    DistrictName: '',
-    isInsideHouse: true,
-    notes: '',
-  );
+  BabysitterRequest request = BabysitterRequest();
+  bool isSelected = false;
+  int? _groupValue;
+  int? get groupValue => _groupValue;
 
-  void setNeighborhood(String neighborhood) {
-    request.DistrictName = neighborhood;
+  void setNeighborhood(String value) {
+    request.districtName = value;
     notifyListeners();
   }
 
-  void setDateFrom(DateTime dateFrom) {
-    request.dateFrom = dateFrom;
+  void setNotes(String value) {
+    request.notes = value;
     notifyListeners();
   }
 
-  void setTimeFrom(TimeOfDay timeFrom) {
-    request.timeFrom = timeFrom;
+  void setDateFrom(DateTime date) {
+    request.dateFrom = date;
     notifyListeners();
   }
 
-  void setDateTo(DateTime dateTo) {
-    request.dateTo = dateTo;
+  void setDateTo(DateTime date) {
+    request.dateTo = date;
     notifyListeners();
   }
 
-  void setTimeTo(TimeOfDay timeTo) {
-    request.timeTo = timeTo;
+  void setTimeFrom(TimeOfDay time) {
+    request.timeFrom = time;
     notifyListeners();
   }
 
-  void setIsInsideHouse(bool isInsideHouse) {
-    request.isInsideHouse = isInsideHouse;
+  void setTimeTo(TimeOfDay time) {
+    request.timeTo = time;
     notifyListeners();
   }
 
-  void setNotes(String notes) {
-    request.notes = notes;
+  void setGroupValue(int? value) {
+    _groupValue = value;
+    isSelected = groupValue == value;
     notifyListeners();
   }
 
   void submitRequest() {
-    print('Request submitted: ${request.toString()}');
+    print('Request submitted: ${request.districtName}, ${request.notes}');
   }
 }
