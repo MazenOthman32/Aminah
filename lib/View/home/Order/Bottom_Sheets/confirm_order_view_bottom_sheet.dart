@@ -1,7 +1,7 @@
 import 'package:amina/Reusable_components/Cards/offer_section_card.dart';
 import 'package:amina/View/home/bottom_navbar_view.dart';
 import 'package:amina/View/home/home__view.dart';
-import 'package:amina/View/home/info_view.dart';
+import 'package:amina/View/home/Talabaty/info_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../Reusable_components/Bottom_Sheets/confirm_bottom_sheet.dart';

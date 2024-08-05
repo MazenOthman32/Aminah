@@ -1,7 +1,6 @@
 import 'package:amina/Resources/color_resources.dart';
 import 'package:amina/View_model/offer_section_card_view_model.dart';
 import '../../../../Reusable_components/Helper_Widgets/text_widget.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';

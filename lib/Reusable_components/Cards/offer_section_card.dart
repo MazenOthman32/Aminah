@@ -3,7 +3,7 @@ import 'package:amina/Reusable_components/Bottom_Sheets/text_field_button_sheet.
 import 'package:amina/Reusable_components/Helper_Widgets/text_widget.dart';
 import 'package:amina/View/Payment/payment_bottom_sheet.dart';
 import 'package:amina/View/home/bottom_navbar_view.dart';
-import 'package:amina/View/home/info_view.dart';
+import 'package:amina/View/home/Talabaty/info_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

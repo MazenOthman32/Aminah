@@ -15,6 +15,8 @@ import 'View_model/offer_card_view_model.dart';
 import 'View_model/offer_section_card_view_model.dart';
 import 'View_model/payment_view_model.dart';
 import 'View_model/place_order_view_model.dart';
+import 'View_model/round_button_view_model.dart';
+import 'View_model/tab_bar_view_model.dart';
 import 'view/on_boarding/splash_view.dart';
 
 void main() async {
@@ -48,6 +50,8 @@ class Amina extends StatelessWidget {
             ChangeNotifierProvider(create: (_) => OfferSectionCardViewModel()),
             ChangeNotifierProvider(create: (_) => AnotherPaymentWayViewModel()),
             ChangeNotifierProvider(create: (_) => PaymentViewModel()),
+            ChangeNotifierProvider(create: (_) => TapBarViewModel()),
+            ChangeNotifierProvider(create: (_) => RoundButtonViewModel()),
           ],
           child: MaterialApp(
             locale: Locale('ar'),
