@@ -1,3 +1,4 @@
+import 'package:amina/View/Tameneni/tameneni_main_view.dart';
 import 'package:flutter/material.dart';
 
 import '../View/home/home__view.dart';
@@ -20,7 +21,7 @@ class BottomNavBarViewModel extends ChangeNotifier {
   List<Widget> get screens => [
         HomeView(),
         InfoView(),
-        BabysitterRequestForm(),
+        TameneniMainView(),
         MySample(),
         ProfileView(),
       ];

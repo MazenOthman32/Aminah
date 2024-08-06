@@ -9,11 +9,13 @@ class AssetsResource {
   static String LogoSVG = "assets/Images/Logo.svg";
   static String EmailPng = 'assets/Images/Png/sms.png';
   static String InvalidLottie = 'assets/Lottie/InvalidLottie.json';
+  static String TameniniLottie = 'assets/Lottie/TameniniLottie.json';
   static String SuccessfulLottieInPrimaryColor =
       'assets/Lottie/SuccessfulLottie.json';
   static String SuccessfulLottieInSecondaryColor =
       'assets/Lottie/SuccessfulLottie2.json';
   static String add_SVG = "assets/Images/Png/add.svg";
+  static String SendSVG = "assets/Images/Png/send-2.svg";
   static String User_Png = "assets/Images/Png/Amira.png";
   static String Kid_1_Png = "assets/Images/Png/Amir.png";
   static String Kid_2_Png = "assets/Images/Png/Farida.png";

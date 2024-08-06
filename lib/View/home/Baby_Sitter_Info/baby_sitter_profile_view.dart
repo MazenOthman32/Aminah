@@ -29,7 +29,7 @@ class BabySitterProfileView extends StatelessWidget {
             ProfileSection(
                 name: 'فرح يوسف',
                 age: 35,
-                image: AssetsResource.MaleSVG,
+                image: AssetsResource.FemaleSVG,
                 rate: 4.6,
                 role: "جليسة أطفال"),
             Padding(

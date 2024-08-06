@@ -1,3 +1,4 @@
+import 'package:amina/View_model/chat_message_view_model.dart';
 import 'package:amina/View_model/child_selection_view_model.dart';
 import 'package:amina/View_model/day_order_view_model.dart';
 import 'package:amina/View_model/on_boarding_view_model.dart';
@@ -19,6 +20,7 @@ import 'View_model/place_order_view_model.dart';
 import 'View_model/rating_view_model.dart';
 import 'View_model/round_button_view_model.dart';
 import 'View_model/tab_bar_view_model.dart';
+import 'View_model/timer_view_model.dart';
 import 'view/on_boarding/splash_view.dart';
 
 void main() async {
@@ -56,6 +58,8 @@ class Amina extends StatelessWidget {
             ChangeNotifierProvider(create: (_) => RoundButtonViewModel()),
             ChangeNotifierProvider(create: (_) => OrderStepsViewModel()),
             ChangeNotifierProvider(create: (_) => RatingViewModel()),
+            ChangeNotifierProvider(create: (_) => TimerViewModel()),
+            ChangeNotifierProvider(create: (_) => ChatViewModel()),
           ],
           child: MaterialApp(
             locale: Locale('ar'),
