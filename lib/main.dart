@@ -7,6 +7,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'View_model/another_payment_way_view_model.dart';
+import 'View_model/order_steps_view_model.dart';
 import 'View_model/radio_button.dart';
 import 'View_model/babysitter_request_form_view_model.dart';
 import 'View_model/bottom_navbar_view_model.dart';
@@ -15,6 +16,7 @@ import 'View_model/offer_card_view_model.dart';
 import 'View_model/offer_section_card_view_model.dart';
 import 'View_model/payment_view_model.dart';
 import 'View_model/place_order_view_model.dart';
+import 'View_model/rating_view_model.dart';
 import 'View_model/round_button_view_model.dart';
 import 'View_model/tab_bar_view_model.dart';
 import 'view/on_boarding/splash_view.dart';
@@ -52,6 +54,8 @@ class Amina extends StatelessWidget {
             ChangeNotifierProvider(create: (_) => PaymentViewModel()),
             ChangeNotifierProvider(create: (_) => TapBarViewModel()),
             ChangeNotifierProvider(create: (_) => RoundButtonViewModel()),
+            ChangeNotifierProvider(create: (_) => OrderStepsViewModel()),
+            ChangeNotifierProvider(create: (_) => RatingViewModel()),
           ],
           child: MaterialApp(
             locale: Locale('ar'),

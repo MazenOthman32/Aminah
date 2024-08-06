@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:amina/View/home/Offers/offer_section_view.dart';
 import 'package:amina/View/home/Order/BabySitter_Order/babysitter_request_form_view.dart';
 import 'package:amina/View/home/Add_New_child/add_new_child.dart';
 import 'package:flutter/material.dart';
@@ -143,7 +144,13 @@ class _HomeViewState extends State<HomeView> {
                   padding: EdgeInsets.symmetric(horizontal: 10.0.w),
                   child: OfferButton(
                     numberOfOffers: 4,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => OfferSectionView(),
+                          ));
+                    },
                   ),
                 ),
               ),

@@ -13,7 +13,7 @@ class ChildrenSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextWidget(
-            text: 'أطفال',
+            text: 'أطفالي',
             color: ColorsManager.black,
           ),
           SizedBox(height: 10),

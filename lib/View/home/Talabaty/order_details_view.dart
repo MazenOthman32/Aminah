@@ -1,12 +1,17 @@
 import 'package:amina/Resources/assets_resources.dart';
 import 'package:amina/Resources/color_resources.dart';
+import 'package:amina/View/home/Baby_Sitter_Info/baby_sitter_profile_view.dart';
 import 'package:amina/View/home/Talabaty/childern_section.dart';
+import 'package:amina/View/home/Talabaty/order_tracking_view.dart';
+import 'package:amina/View/home/Talabaty/profile_bottom_sheet.dart';
+import 'package:amina/View/home/Talabaty/report_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import '../../../Models/day_order_model.dart';
 import '../../../Reusable_components/Helper_Widgets/text_widget.dart';
+import 'comunication_button_sheet.dart';
 import 'order_info_section.dart';
+import 'order_tracker_location.dart';
 
 class OrderDetailsView extends StatelessWidget {
   @override
@@ -96,7 +101,9 @@ class OrderDetailsView extends StatelessWidget {
                           ],
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            ReportBottomSheet(context);
+                          },
                           icon: ImageIcon(
                             color: ColorsManager.black,
                             AssetImage(AssetsResource.DotsPng),
@@ -112,7 +119,14 @@ class OrderDetailsView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         TextButton.icon(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      OrderTrackerLocationView(),
+                                ));
+                          },
                           icon: Icon(
                             Icons.map,
                             color: ColorsManager.black,
@@ -123,7 +137,9 @@ class OrderDetailsView extends StatelessWidget {
                           ),
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            communicationButtonSheet(context);
+                          },
                           child: TextWidget(
                               text: 'تواصل', color: ColorsManager.black),
                         ),
@@ -140,65 +156,14 @@ class OrderDetailsView extends StatelessWidget {
             SizedBox(height: 20),
             OrderInfoSection(),
             SizedBox(height: 20),
-            ServiceStatus(),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class ServiceStatus extends StatelessWidget {
-  final List<Map<String, dynamic>> steps = [
-    {"title": "تم تأكيد الطلب", "completed": true},
-    {"title": "لقد وصلت الجلسة", "completed": true},
-    {"title": "بداية الخدمة", "completed": false},
-    {"title": "نهاية الخدمة", "completed": false},
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-        children: steps.map((step) {
-          return StepTile(
-            title: step['title'],
-            completed: step['completed'],
-          );
-        }).toList(),
-      ),
-    );
-  }
-}
-
-class StepTile extends StatelessWidget {
-  final String title;
-  final bool completed;
-
-  StepTile({required this.title, required this.completed});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Column(
-          children: [
-            CircleAvatar(
-              radius: 10,
-              backgroundColor: completed ? Colors.cyan : Colors.grey,
+            Divider(
+              thickness: 3,
+              color: ColorsManager.med_grey,
             ),
-            if (!completed)
-              Container(
-                height: 40,
-                width: 2,
-                color: Colors.grey,
-              ),
+            OrderTrackingView(),
           ],
         ),
-        SizedBox(width: 8),
-        Text(title),
-      ],
+      ),
     );
   }
 }

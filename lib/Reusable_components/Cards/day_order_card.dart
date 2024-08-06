@@ -1,11 +1,13 @@
 import 'package:amina/Models/day_order_model.dart';
 import 'package:amina/Resources/assets_resources.dart';
 import 'package:amina/Reusable_components/Helper_Widgets/text_widget.dart';
+import 'package:amina/View/home/Talabaty/order_tracker_location.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../Resources/color_resources.dart';
 import '../../Resources/string_resources.dart';
+import '../../View/home/Talabaty/comunication_button_sheet.dart';
 
 class DayOrderCard extends StatelessWidget {
   final DayOrderModel dayOrder;
@@ -135,7 +137,13 @@ class DayOrderCard extends StatelessWidget {
                   ),
                   SvgPicture.asset(AssetsResource.MapSVG),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => OrderTrackerLocationView(),
+                          ));
+                    },
                     child: TextWidget(
                       text: 'تتبع على الخريطة',
                       color: ColorsManager.black,
@@ -147,7 +155,9 @@ class DayOrderCard extends StatelessWidget {
                     child: VerticalDivider(),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      communicationButtonSheet(context);
+                    },
                     child: TextWidget(
                       text: 'تواصل',
                       color: ColorsManager.black,

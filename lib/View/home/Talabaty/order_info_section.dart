@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OrderInfoSection extends StatelessWidget {
-  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 10.0.w),
@@ -16,7 +15,7 @@ class OrderInfoSection extends StatelessWidget {
               Text('اليوم 5:30 م - 8:30 م', style: TextStyle(fontSize: 14)),
             ],
           ),
-          SizedBox(height: 4),
+          SizedBox(height: 4.h),
           Row(
             children: [
               Icon(Icons.attach_money, size: 16, color: Colors.grey),
