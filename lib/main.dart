@@ -6,10 +6,12 @@ import 'package:amina/View_model/notification_view_model.dart';
 import 'package:amina/View_model/on_boarding_view_model.dart';
 import 'package:amina/View_model/otp_view_model.dart';
 import 'package:amina/View_model/time_extend_view_model.dart';
+import 'package:amina/View_model/user_balance_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import 'View_model/add_to_balance_view_model.dart';
 import 'View_model/another_payment_way_view_model.dart';
 import 'View_model/order_steps_view_model.dart';
 import 'View_model/radio_button.dart';
@@ -24,6 +26,7 @@ import 'View_model/rating_view_model.dart';
 import 'View_model/round_button_view_model.dart';
 import 'View_model/tab_bar_view_model.dart';
 import 'View_model/timer_view_model.dart';
+import 'View_model/transactions_view_model.dart';
 import 'view/on_boarding/splash_view.dart';
 
 void main() async {
@@ -66,6 +69,9 @@ class Amina extends StatelessWidget {
             ChangeNotifierProvider(create: (_) => TimeExtendViewModel()),
             ChangeNotifierProvider(create: (_) => NotificationViewModel()),
             ChangeNotifierProvider(create: (_) => CounterViewModel()),
+            ChangeNotifierProvider(create: (_) => TransactionViewModel()),
+            ChangeNotifierProvider(create: (_) => UserBalanceViewModel()),
+            ChangeNotifierProvider(create: (_) => AddToBalanceViewModel()),
           ],
           child: MaterialApp(
             locale: Locale('ar'),

@@ -56,6 +56,8 @@ class AssetsResource {
   static String CashSVG = "assets/Images/Png/Cash.svg";
   static String VisaSVG = "assets/Images/Png/Visa.svg";
   static String MasterCardSVG = "assets/Images/Png/MasterCard.svg";
+  static String DownArrowSVG = "assets/Images/Png/DownArrow.svg";
+  static String UpArrowSVG = "assets/Images/Png/UpArrow.svg";
   static String CashPNG = "assets/Images/Png/Cash.png";
   static String VisaPNG = "assets/Images/Png/Visa.png";
   static String MasterCardPNG = "assets/Images/Png/MasterCard.png";

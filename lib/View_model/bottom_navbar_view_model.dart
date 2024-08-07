@@ -22,7 +22,7 @@ class BottomNavBarViewModel extends ChangeNotifier {
         HomeView(),
         InfoView(),
         TameneniMainView(),
-        MySample(),
+        WalletView(),
         ProfileView(),
       ];
 }

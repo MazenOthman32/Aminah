@@ -39,7 +39,6 @@ class PaymentOptionsComponent extends StatelessWidget {
           },
           icon: AssetsResource.VisaPNG,
         ),
-        // Add more payment methods if needed
       ],
     );
   }

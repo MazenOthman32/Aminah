@@ -17,8 +17,7 @@ class TameniniBottomSheet extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Lottie.asset(
-            AssetsResource
-                .TameniniLottie, // Make sure to add your Lottie file in the assets
+            AssetsResource.TameniniLottie,
             width: 100.w,
             height: 100.h,
             fit: BoxFit.cover,
