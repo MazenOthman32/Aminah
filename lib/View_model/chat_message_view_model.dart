@@ -1,5 +1,5 @@
-import 'package:amina/Models/chat_message_model.dart';
 import 'package:flutter/material.dart';
+import '../Models/chat_message_model.dart';
 
 class ChatViewModel extends ChangeNotifier {
   List<ChatMessageModel> _messages = [];
@@ -8,17 +8,11 @@ class ChatViewModel extends ChangeNotifier {
 
   void sendMessage(String message) {
     _messages.add(ChatMessageModel(
-      message: message,
-      isSentByMe: true,
-      timestamp: DateTime.now(),
-    ));
-
+        message: message, isSentByMe: true, timestamp: DateTime.now()));
+    // Simulate a response from the other side
     Future.delayed(Duration(seconds: 1), () {
       _messages.add(ChatMessageModel(
-        message: "Response to: $message",
-        isSentByMe: false,
-        timestamp: DateTime.now(),
-      ));
+          message: message, isSentByMe: false, timestamp: DateTime.now()));
       notifyListeners();
     });
     notifyListeners();

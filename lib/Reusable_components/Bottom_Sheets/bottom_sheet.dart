@@ -1,3 +1,5 @@
+import 'package:amina/Resources/color_resources.dart';
+import 'package:amina/Reusable_components/Helper_Widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
@@ -6,6 +8,7 @@ import '../Buttons/large_button.dart';
 
 class BottomSheetContent extends StatelessWidget {
   final String message;
+  final String? description;
   final String lottie;
   final bool isSuccess;
   final String buttonMessage;
@@ -18,6 +21,7 @@ class BottomSheetContent extends StatelessWidget {
     required this.lottie,
     required this.isSuccess,
     required this.targetScreen,
+    this.description,
   });
 
   @override
@@ -29,13 +33,18 @@ class BottomSheetContent extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
-            message,
-            style: TextStyle(
-              fontSize: 18.0.sp,
-              fontWeight: FontWeight.bold,
-              fontFamily: FontResources.fontFamily,
-            ),
+          TextWidget(
+            text: message,
+            color: ColorsManager.black,
+            fontsize: 18.0.sp,
+            fontWeight: FontWeight.bold,
+          ),
+          SizedBox(height: 8.0.h),
+          TextWidget(
+            text: description ?? '',
+            color: ColorsManager.black,
+            fontsize: 14.0.sp,
+            maxLines: 3,
           ),
           SizedBox(height: 8.0.h),
           Lottie.asset(

@@ -13,6 +13,7 @@ import '../home/Talabaty/comunication_button_sheet.dart';
 import '../home/Talabaty/order_details_view.dart';
 import '../home/Talabaty/order_tracker_location.dart';
 import '../home/Talabaty/report_bottom_sheet.dart';
+import 'extend_time_bottom_sheet.dart';
 import 'tamenini_bottom_sheet.dart';
 
 class TameneniMainView extends StatelessWidget {
@@ -183,6 +184,12 @@ class TameneniMainView extends StatelessWidget {
                             ),
                             TimerWidget(
                               text: 'نمديد الوقت',
+                              onTap: () {
+                                showBottomSheet(
+                                  context: context,
+                                  builder: (context) => ExtendTimeBottomSheet(),
+                                );
+                              },
                             ),
                             SizedBox(
                               height: 10.h,

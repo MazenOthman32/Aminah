@@ -1,5 +1,8 @@
+import 'package:amina/Resources/assets_resources.dart';
 import 'package:amina/Resources/color_resources.dart';
+import 'package:amina/Reusable_components/Bottom_Sheets/bottom_sheet.dart';
 import 'package:amina/View/Payment/another_payment_way_view.dart';
+import 'package:amina/View/home/Order/Bottom_Sheets/confirm_order_view_bottom_sheet.dart';
 import '../../../../Reusable_components/Helper_Widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -84,9 +87,27 @@ class PaymentBottomSheet extends StatelessWidget {
               child: SizedBox(
                 width: double.infinity,
                 child: LargeButton(
-                  text: buttonMessage,
-                  onPressed: onTap,
-                ),
+                    text: buttonMessage,
+                    onPressed: () {
+                      Navigator.pop(context);
+                      showModalBottomSheet(
+                        context: context,
+                        builder: (context) => BottomSheetContent(
+                          description:
+                              "تم إرسال طلبك للجليسة وستقوم بالموافقة او الرفض .",
+                          buttonMessage: '',
+                          message: "تم إرسال طلبك بنجاح",
+                          lottie: AssetsResource.SuccessfulLottieInPrimaryColor,
+                          isSuccess: false,
+                          targetScreen: SizedBox(),
+                        ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.vertical(top: Radius.circular(16.0)),
+                        ),
+                        isScrollControlled: true,
+                      );
+                    }),
               ),
             ),
           ],

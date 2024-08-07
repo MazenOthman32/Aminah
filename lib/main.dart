@@ -1,8 +1,11 @@
 import 'package:amina/View_model/chat_message_view_model.dart';
 import 'package:amina/View_model/child_selection_view_model.dart';
+import 'package:amina/View_model/counter_widget_view_model.dart';
 import 'package:amina/View_model/day_order_view_model.dart';
+import 'package:amina/View_model/notification_view_model.dart';
 import 'package:amina/View_model/on_boarding_view_model.dart';
 import 'package:amina/View_model/otp_view_model.dart';
+import 'package:amina/View_model/time_extend_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -60,6 +63,9 @@ class Amina extends StatelessWidget {
             ChangeNotifierProvider(create: (_) => RatingViewModel()),
             ChangeNotifierProvider(create: (_) => TimerViewModel()),
             ChangeNotifierProvider(create: (_) => ChatViewModel()),
+            ChangeNotifierProvider(create: (_) => TimeExtendViewModel()),
+            ChangeNotifierProvider(create: (_) => NotificationViewModel()),
+            ChangeNotifierProvider(create: (_) => CounterViewModel()),
           ],
           child: MaterialApp(
             locale: Locale('ar'),

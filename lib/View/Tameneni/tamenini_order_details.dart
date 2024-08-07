@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../Resources/assets_resources.dart';
+import 'extend_time_bottom_sheet.dart';
 
 class TameniniOrderDetails extends StatelessWidget {
   @override
@@ -82,7 +83,20 @@ class TameniniOrderDetails extends StatelessWidget {
             ),
             Padding(
                 padding: EdgeInsets.symmetric(vertical: 10.0.h),
-                child: TimerWidget(text: "تمديد الجلسة")),
+                child: TimerWidget(
+                  text: "تمديد الجلسة",
+                  onTap: () {
+                    showModalBottomSheet(
+                      context: context,
+                      builder: (context) => ExtendTimeBottomSheet(),
+                      shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.vertical(top: Radius.circular(16.0)),
+                      ),
+                      isScrollControlled: true,
+                    );
+                  },
+                )),
           ],
         ),
       ),

@@ -10,7 +10,8 @@ import '../../View_model/timer_view_model.dart';
 class TimerWidget extends StatelessWidget {
   @override
   final String text;
-  TimerWidget({required this.text});
+  final Function() onTap;
+  TimerWidget({required this.text, required this.onTap});
   Widget build(BuildContext context) {
     return Consumer<TimerViewModel>(
       builder: (context, viewModel, child) {
@@ -40,7 +41,7 @@ class TimerWidget extends StatelessWidget {
                   ),
                   SizedBox(width: 20.w),
                   InkWell(
-                    onTap: () {},
+                    onTap: onTap,
                     child: Text(
                       '+ ${text}',
                       style: TextStyle(

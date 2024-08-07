@@ -1,7 +1,11 @@
 import 'dart:async';
+import 'package:amina/View/Tameneni/Chat/chat_list_view.dart';
+import 'package:amina/View/Tameneni/Chat/chat_view.dart';
+import 'package:amina/View/Tameneni/Notification/notification_view.dart';
 import 'package:amina/View/home/Offers/offer_section_view.dart';
 import 'package:amina/View/home/Order/BabySitter_Order/babysitter_request_form_view.dart';
 import 'package:amina/View/home/Add_New_child/add_new_child.dart';
+import 'package:amina/View_model/chat_list_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -72,14 +76,27 @@ class _HomeViewState extends State<HomeView> {
             SmallIconButton(
               iconAsset: AssetsResource.MessageSVG,
               iconCount: 2,
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ChatListView(),
+                    ));
+              },
             ),
             Padding(
               padding: EdgeInsets.only(left: 16.w),
               child: SmallIconButton(
                 iconAsset: AssetsResource.NotificationSVG,
                 iconCount: 0,
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => NotificationListView(),
+                    ),
+                  );
+                },
               ),
             ),
           ],

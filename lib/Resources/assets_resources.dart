@@ -60,4 +60,5 @@ class AssetsResource {
   static String VisaPNG = "assets/Images/Png/Visa.png";
   static String MasterCardPNG = "assets/Images/Png/MasterCard.png";
   static String CertificatePNG = "assets/Images/Png/Certificate.png";
+  static String SeenPNG = "assets/Images/Png/seen.png";
 }

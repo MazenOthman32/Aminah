@@ -3,7 +3,7 @@ import 'package:amina/Resources/assets_resources.dart';
 import 'package:amina/Resources/font_resources.dart';
 import 'package:amina/Reusable_components/Helper_Widgets/text_widget.dart';
 import 'package:amina/View_model/chat_message_view_model.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
