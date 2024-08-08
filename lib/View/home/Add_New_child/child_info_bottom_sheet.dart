@@ -18,7 +18,7 @@ class ChildInfoBottomSheet extends StatelessWidget {
             height: 4.h,
             width: 40.w,
             decoration: BoxDecoration(
-              color: Colors.grey[300],
+              color: Colors.grey,
               borderRadius: BorderRadius.circular(2.r),
             ),
           ),

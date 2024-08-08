@@ -91,4 +91,8 @@ class AssetsResource {
   static String Sponser_3_SVG = "assets/Images/Png/Sponser_3.svg";
   static String PersonSVG = "assets/Images/Png/Person.svg";
   static String EditPNG = "assets/Images/Png/Edit.png";
+  static String Sponser_1_PNG = "assets/Images/Png/Sponser_1.png";
+  static String Sponser_2_PNG = "assets/Images/Png/Sponser_2.png";
+  static String Sponser_3_PNG = "assets/Images/Png/Sponser_3.png";
+  static String ManPNG = "assets/Images/Png/Man.png";
 }

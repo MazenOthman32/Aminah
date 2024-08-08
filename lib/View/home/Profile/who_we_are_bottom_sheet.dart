@@ -80,7 +80,7 @@ class WhoWeAreBottomSheet extends StatelessWidget {
                         color: ColorsManager.grey,
                       ),
                     ),
-                    child: SvgPicture.asset(AssetsResource.Sponser_1_SVG),
+                    child: Image.asset(AssetsResource.Sponser_1_PNG),
                   ),
                   SizedBox(
                     width: 15.w,
@@ -94,7 +94,7 @@ class WhoWeAreBottomSheet extends StatelessWidget {
                         color: ColorsManager.grey,
                       ),
                     ),
-                    child: SvgPicture.asset(AssetsResource.Sponser_1_SVG),
+                    child: Image.asset(AssetsResource.Sponser_2_PNG),
                   ),
                   SizedBox(
                     width: 15.w,
@@ -108,7 +108,7 @@ class WhoWeAreBottomSheet extends StatelessWidget {
                         color: ColorsManager.grey,
                       ),
                     ),
-                    child: SvgPicture.asset(AssetsResource.Sponser_1_SVG),
+                    child: Image.asset(AssetsResource.Sponser_3_PNG),
                   ),
                 ],
               ),
@@ -160,8 +160,9 @@ class WhoWeAreBottomSheet extends StatelessWidget {
                           Row(
                             children: [
                               CircleAvatar(
-                                  child:
-                                      SvgPicture.asset(AssetsResource.ManSVG)),
+                                backgroundImage:
+                                    AssetImage(AssetsResource.ManPNG),
+                              ),
                               SizedBox(
                                 width: 10.h,
                               ),
@@ -203,8 +204,9 @@ class WhoWeAreBottomSheet extends StatelessWidget {
                           Row(
                             children: [
                               CircleAvatar(
-                                  child:
-                                      SvgPicture.asset(AssetsResource.ManSVG)),
+                                backgroundImage:
+                                    AssetImage(AssetsResource.ManPNG),
+                              ),
                               SizedBox(
                                 width: 10.h,
                               ),
@@ -246,8 +248,9 @@ class WhoWeAreBottomSheet extends StatelessWidget {
                           Row(
                             children: [
                               CircleAvatar(
-                                  child:
-                                      SvgPicture.asset(AssetsResource.ManSVG)),
+                                backgroundImage:
+                                    AssetImage(AssetsResource.ManPNG),
+                              ),
                               SizedBox(
                                 width: 10.h,
                               ),

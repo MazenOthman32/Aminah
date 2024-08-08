@@ -9,18 +9,18 @@ class ChatListViewModel {
         name: 'فرح يوسف',
         message: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المسا...',
         time: 1,
-        avatarUrl: AssetsResource.User_Png,
+        avatarUrl: AssetsResource.FarahPng,
       ),
       ChatListModel(
           name: 'فرح يوسف',
           message: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المسا...',
           time: 1,
-          avatarUrl: AssetsResource.User_Png),
+          avatarUrl: AssetsResource.FarahPng),
       ChatListModel(
           name: 'فرح يوسف',
           message: 'عايزة أطمئن على طفلي',
           time: 0,
-          avatarUrl: AssetsResource.User_Png),
+          avatarUrl: AssetsResource.FarahPng),
     ];
   }
 

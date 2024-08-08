@@ -14,7 +14,7 @@ class DayOrderViewModel with ChangeNotifier {
       timeTo: 8.30,
       paymentStatus: 'تم الدفع',
       paymentAmount: 500,
-      imagePath: AssetsResource.User_Png, // Change to your image path
+      imagePath: AssetsResource.FarahPng, // Change to your image path
     ),
     DayOrderModel(
       name: 'فرح يوسف',
@@ -26,7 +26,7 @@ class DayOrderViewModel with ChangeNotifier {
       timeTo: 8.30,
       paymentStatus: 'تم الدفع',
       paymentAmount: 500,
-      imagePath: AssetsResource.User_Png, // Change to your image path
+      imagePath: AssetsResource.FarahPng, // Change to your image path
     ),
     DayOrderModel(
       name: 'فرح يوسف',
@@ -38,7 +38,7 @@ class DayOrderViewModel with ChangeNotifier {
       timeTo: 8.30,
       paymentStatus: 'تم الدفع',
       paymentAmount: 500,
-      imagePath: AssetsResource.User_Png, // Change to your image path
+      imagePath: AssetsResource.FarahPng, // Change to your image path
     ),
   ];
 

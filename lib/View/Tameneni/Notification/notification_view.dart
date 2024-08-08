@@ -31,7 +31,7 @@ class _NotificationListViewState extends State<NotificationListView> {
                 final notification = viewModel.notifications[index];
                 return ListTile(
                   leading: CircleAvatar(
-                    backgroundImage: AssetImage(AssetsResource.User_Png),
+                    backgroundImage: AssetImage(AssetsResource.FarahPng),
                   ),
                   title: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

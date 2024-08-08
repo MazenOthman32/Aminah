@@ -25,7 +25,7 @@ class OrderDetailsView extends StatelessWidget {
       timeTo: 8.30,
       paymentStatus: "تم الدفع",
       paymentAmount: 500,
-      imagePath: AssetsResource.User_Png);
+      imagePath: AssetsResource.FarahPng);
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,7 +74,7 @@ class OrderDetailsView extends StatelessWidget {
                           children: [
                             CircleAvatar(
                               backgroundImage:
-                                  AssetImage(AssetsResource.User_Png),
+                                  AssetImage(AssetsResource.FarahPng),
                               radius: 24.0.r,
                             ),
                             SizedBox(width: 10.0.w),
