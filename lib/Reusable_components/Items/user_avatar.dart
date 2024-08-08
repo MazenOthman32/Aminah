@@ -25,15 +25,17 @@ class UserAvatar extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () {
-            showModalBottomSheet(
-              context: context,
-              builder: (context) => ChildInfoBottomSheet(),
-              shape: RoundedRectangleBorder(
-                borderRadius:
-                    BorderRadius.vertical(top: Radius.circular(16.0.r)),
-              ),
-              isScrollControlled: true,
-            );
+            isAddButton
+                ? onTap
+                : showModalBottomSheet(
+                    context: context,
+                    builder: (context) => ChildInfoBottomSheet(),
+                    shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.vertical(top: Radius.circular(16.0.r)),
+                    ),
+                    isScrollControlled: true,
+                  );
           },
           child: Container(
             margin: EdgeInsets.symmetric(horizontal: 4.w),
