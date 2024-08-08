@@ -1,4 +1,5 @@
 import 'package:amina/Resources/font_resources.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../Reusable_components/Helper_Widgets/text_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,7 @@ class LargeButton extends StatelessWidget {
   final double rightPadding;
   final double? fontSize;
   final double? borderRadius;
+  final String? image;
   final String fontFamily;
   const LargeButton({
     super.key,
@@ -29,6 +31,7 @@ class LargeButton extends StatelessWidget {
     this.leftPadding = 0,
     this.rightPadding = 0,
     this.fontFamily = FontResources.fontFamily,
+    this.image,
   });
 
   @override
@@ -53,14 +56,25 @@ class LargeButton extends StatelessWidget {
           onPressed: onPressed,
           child: Align(
             alignment: AlignmentDirectional.center,
-            child: TextWidget(
-                text: text,
-                textAlign: TextAlign.center,
-                textStyle: TextStyle(
-                  fontSize: fontSize,
-                  color: fontColor,
-                  fontFamily: fontFamily,
-                )),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                image != null
+                    ? Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10.w),
+                        child: SvgPicture.asset(image!),
+                      )
+                    : SizedBox(),
+                TextWidget(
+                    text: text,
+                    textAlign: TextAlign.center,
+                    textStyle: TextStyle(
+                      fontSize: fontSize,
+                      color: fontColor,
+                      fontFamily: fontFamily,
+                    )),
+              ],
+            ),
           ),
         ),
       ),

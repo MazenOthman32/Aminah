@@ -1,6 +1,7 @@
 import 'package:amina/Resources/assets_resources.dart';
 import 'package:amina/Resources/color_resources.dart';
 import 'package:amina/Reusable_components/Helper_Widgets/text_widget.dart';
+import 'package:amina/View/home/Add_New_child/child_info_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -23,7 +24,17 @@ class UserAvatar extends StatelessWidget {
     return Column(
       children: [
         GestureDetector(
-          onTap: onTap,
+          onTap: () {
+            showModalBottomSheet(
+              context: context,
+              builder: (context) => ChildInfoBottomSheet(),
+              shape: RoundedRectangleBorder(
+                borderRadius:
+                    BorderRadius.vertical(top: Radius.circular(16.0.r)),
+              ),
+              isScrollControlled: true,
+            );
+          },
           child: Container(
             margin: EdgeInsets.symmetric(horizontal: 4.w),
             width: 45.w,

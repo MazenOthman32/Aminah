@@ -2,6 +2,7 @@ import 'package:amina/View_model/chat_message_view_model.dart';
 import 'package:amina/View_model/child_selection_view_model.dart';
 import 'package:amina/View_model/counter_widget_view_model.dart';
 import 'package:amina/View_model/day_order_view_model.dart';
+import 'package:amina/View_model/faq_view_model.dart';
 import 'package:amina/View_model/notification_view_model.dart';
 import 'package:amina/View_model/on_boarding_view_model.dart';
 import 'package:amina/View_model/otp_view_model.dart';
@@ -13,6 +14,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'View_model/add_to_balance_view_model.dart';
 import 'View_model/another_payment_way_view_model.dart';
+import 'View_model/home_view_model.dart';
 import 'View_model/order_steps_view_model.dart';
 import 'View_model/radio_button.dart';
 import 'View_model/babysitter_request_form_view_model.dart';
@@ -47,6 +49,7 @@ class Amina extends StatelessWidget {
       builder: (context, child) {
         return MultiProvider(
           providers: [
+            ChangeNotifierProvider(create: (_) => HomeViewModel()),
             ChangeNotifierProvider(create: (_) => OfferCardViewModel()),
             ChangeNotifierProvider(create: (_) => OnBoardingViewModel()),
             ChangeNotifierProvider(create: (_) => OtpViewModel()),
@@ -72,6 +75,7 @@ class Amina extends StatelessWidget {
             ChangeNotifierProvider(create: (_) => TransactionViewModel()),
             ChangeNotifierProvider(create: (_) => UserBalanceViewModel()),
             ChangeNotifierProvider(create: (_) => AddToBalanceViewModel()),
+            ChangeNotifierProvider(create: (_) => FAQViewModel()),
           ],
           child: MaterialApp(
             locale: Locale('ar'),

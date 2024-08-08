@@ -1,4 +1,5 @@
 import 'package:amina/Resources/color_resources.dart';
+import 'package:amina/Reusable_components/Bottom_Sheets/text_field_button_sheet.dart';
 import 'package:amina/Reusable_components/Helper_Widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,6 +17,18 @@ class PromoCodeComponent extends StatelessWidget {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.r)),
           value: context.watch<PaymentViewModel>().hasPromoCode,
           onChanged: (value) {
+            showModalBottomSheet(
+              context: context,
+              builder: (context) => TextFieldBottomSheet(
+                  buttonMessage: 'تفعيل',
+                  message: "برجاء إدخال كود الخصم",
+                  hintText: "إكتب هنا"),
+              shape: RoundedRectangleBorder(
+                borderRadius:
+                    BorderRadius.vertical(top: Radius.circular(16.0.r)),
+              ),
+              isScrollControlled: true,
+            );
             context.read<PaymentViewModel>().togglePromoCode();
           },
         ),
