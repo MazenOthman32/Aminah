@@ -24,10 +24,10 @@ class UserAvatar extends StatelessWidget {
     return Column(
       children: [
         GestureDetector(
-          onTap: () {
-            isAddButton
-                ? onTap
-                : showModalBottomSheet(
+          onTap: isAddButton != false
+              ? onTap
+              : () {
+                  showModalBottomSheet(
                     context: context,
                     builder: (context) => ChildInfoBottomSheet(),
                     shape: RoundedRectangleBorder(
@@ -36,7 +36,7 @@ class UserAvatar extends StatelessWidget {
                     ),
                     isScrollControlled: true,
                   );
-          },
+                },
           child: Container(
             margin: EdgeInsets.symmetric(horizontal: 4.w),
             width: 45.w,
