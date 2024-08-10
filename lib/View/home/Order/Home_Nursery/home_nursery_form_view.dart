@@ -1,5 +1,6 @@
 import 'package:amina/Resources/assets_resources.dart';
 import 'package:amina/Resources/font_resources.dart';
+import 'package:amina/Reusable_components/Buttons/Back_Button.dart';
 import 'package:amina/Reusable_components/Buttons/large_button.dart';
 import 'package:amina/Reusable_components/Buttons/radio_button.dart';
 import 'package:amina/Reusable_components/Fields/small_field.dart';
@@ -76,6 +77,8 @@ class HomeNurseryFormView extends StatelessWidget {
       create: (BuildContext context) => HomeViewModel(),
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
+          leading: CustomBackButton(),
           centerTitle: true,
           title: TextWidget(
             text: 'طلب حضانة منزلية',
@@ -184,8 +187,10 @@ class HomeNurseryFormView extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 100.h, // Adjust the height as needed
-                    child: SelectedChildrenScreen(),
+                    height: 85.h, // Adjust the height as needed
+                    child: SelectedChildrenScreen(
+                      targetScreen: HomeNurseryFormView(),
+                    ),
                   ),
                   SizedBox(height: 16.h),
                   Divider(

@@ -1,4 +1,5 @@
 import 'package:amina/Resources/assets_resources.dart';
+import 'package:amina/Reusable_components/Buttons/Back_Button.dart';
 import 'package:amina/Reusable_components/Buttons/large_button.dart';
 import 'package:amina/Reusable_components/Helper_Widgets/text_widget.dart';
 import 'package:amina/View/Wallet/delete_bottom_sheet.dart';
@@ -14,6 +15,8 @@ class ProfileInfoView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        leading: CustomBackButton(),
         centerTitle: true,
         title: TextWidget(
           text: "معلومات الحساب",

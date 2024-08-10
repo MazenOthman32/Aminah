@@ -43,7 +43,10 @@ class AssetsResource {
   static String MapSVG = "assets/Images/Png/map.svg";
   static String MoneySVG = "assets/Images/Png/money.svg";
   static String CalendarPng = "assets/Images/Png/Calendar.png";
+  static String BackArrowPng = "assets/Images/Png/arrow-right.png";
+  static String BackArrowSvg = "assets/Images/Png/arrow-right.svg";
   static String ClockPng = "assets/Images/Png/clock.png";
+  static String BabySitterPng = "assets/Images/Png/BabySitter.png";
   static String BrokenPng = "assets/Images/Png/BrokenPhoto.png";
   static String MalePng = "assets/Images/Png/Male.png";
   static String FemalePng = "assets/Images/Png/Female.png";
@@ -54,6 +57,10 @@ class AssetsResource {
   static String MaleSignSVG = "assets/Images/Png/MaleSign.svg";
   static String MaleSVG = "assets/Images/Png/Male.svg";
   static String FemaleSVG = "assets/Images/Png/Female.svg";
+  static String SMSSVG = "assets/Images/Png/messages.svg";
+  static String MedicalSVG = "assets/Images/Png/Medical Kit.svg";
+  static String NoteSVG = "assets/Images/Png/note-2.svg";
+  static String CallingSVG = "assets/Images/Png/calll.svg";
   static String CashSVG = "assets/Images/Png/Cash.svg";
   static String VisaSVG = "assets/Images/Png/Visa.svg";
   static String CallSVG = "assets/Images/Png/Call.svg";

@@ -10,17 +10,17 @@ class HomeViewModel extends ChangeNotifier {
       onTap: () {},
     ),
     UserAvatar(
-      imagePath: AssetsResource.Kid_2_Png,
+      imagePath: AssetsResource.Kid_4_Png,
       name: 'سليم',
       onTap: () {},
     ),
     UserAvatar(
-      imagePath: AssetsResource.Kid_3_Png,
+      imagePath: AssetsResource.Kid_2_Png,
       name: 'فريدة',
       onTap: () {},
     ),
     UserAvatar(
-      imagePath: AssetsResource.Kid_4_Png,
+      imagePath: AssetsResource.Kid_3_Png,
       name: 'مالك',
       onTap: () {},
     ),

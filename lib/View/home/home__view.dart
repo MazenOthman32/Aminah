@@ -1,11 +1,11 @@
 import 'dart:async';
 import 'package:amina/View/Tameneni/Chat/chat_list_view.dart';
-import 'package:amina/View/Tameneni/Chat/chat_view.dart';
 import 'package:amina/View/Tameneni/Notification/notification_view.dart';
 import 'package:amina/View/home/Offers/offer_section_view.dart';
 import 'package:amina/View/home/Order/BabySitter_Order/babysitter_request_form_view.dart';
 import 'package:amina/View/home/Add_New_child/add_new_child.dart';
-import 'package:amina/View_model/chat_list_view_model.dart';
+import 'package:amina/View/home/Profile/profie_view.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -55,16 +55,20 @@ class _HomeViewState extends State<HomeView> {
         appBar: AppBar(
           title: Row(
             children: [
-              SizedBox(
-                width: 10.w,
+              GestureDetector(
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ProfileView(),
+                    )),
+                child: Image.asset(
+                  AssetsResource.User_Png,
+                  height: 45.h,
+                  width: 45.w,
+                ),
               ),
-              Image.asset(
-                AssetsResource.User_Png,
-                height: 45.h,
-                width: 45.w,
-              ),
               SizedBox(
-                width: 10.w,
+                width: 5.w,
               ),
               TextWidget(
                 text: StringsManager.Hi_User,
@@ -112,11 +116,12 @@ class _HomeViewState extends State<HomeView> {
               Row(
                 children: [
                   SizedBox(
-                    width: 30.w,
+                    width: 15.w,
                   ),
                   TextWidget(
                     text: 'أطفالي',
                     color: ColorsManager.black,
+                    fontsize: 16.sp,
                   ),
                 ],
               ),
@@ -210,14 +215,18 @@ class _HomeViewState extends State<HomeView> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(10.w),
+                padding: EdgeInsets.symmetric(
+                  horizontal: 15.w,
+                  vertical: 15.h,
+                ),
                 child: TextWidget(
                   text: 'تتبع طلبات اليوم',
+                  fontsize: 16.sp,
                   color: ColorsManager.black,
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(10.0.r),
+                padding: EdgeInsets.symmetric(horizontal: 10.0.w),
                 child: SizedBox(
                   child: DayOrderListView(),
                   width: 400.w,

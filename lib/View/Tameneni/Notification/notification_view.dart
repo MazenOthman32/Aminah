@@ -1,5 +1,6 @@
 import 'package:amina/Resources/assets_resources.dart';
 import 'package:amina/Resources/color_resources.dart';
+import 'package:amina/Reusable_components/Buttons/Back_Button.dart';
 import 'package:amina/Reusable_components/Helper_Widgets/text_widget.dart';
 import 'package:amina/View_model/notification_view_model.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,8 @@ class _NotificationListViewState extends State<NotificationListView> {
       create: (_) => NotificationViewModel()..fetchNotifications(),
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
+          leading: CustomBackButton(),
           centerTitle: true,
           title: TextWidget(
             text: 'الإشعارات',

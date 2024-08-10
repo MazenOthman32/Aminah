@@ -16,9 +16,9 @@ class Child {
 class ChildSelectionViewModel extends ChangeNotifier {
   List<Child> children = [
     Child(name: 'أمير', imagePath: AssetsResource.Kid_1_Png),
-    Child(name: 'سليم', imagePath: AssetsResource.Kid_2_Png),
-    Child(name: 'فريدة', imagePath: AssetsResource.Kid_3_Png),
-    Child(name: 'مالك', imagePath: AssetsResource.Kid_4_Png),
+    Child(name: 'سليم', imagePath: AssetsResource.Kid_4_Png),
+    Child(name: 'فريدة', imagePath: AssetsResource.Kid_2_Png),
+    Child(name: 'مالك', imagePath: AssetsResource.Kid_3_Png),
   ];
 
   void toggleSelection(int index) {

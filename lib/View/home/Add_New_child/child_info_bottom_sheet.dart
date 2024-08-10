@@ -1,4 +1,5 @@
 import 'package:amina/Resources/assets_resources.dart';
+import 'package:amina/Resources/color_resources.dart';
 import 'package:amina/Reusable_components/Buttons/large_button.dart';
 import 'package:amina/Reusable_components/Helper_Widgets/text_widget.dart';
 import 'package:amina/View/home/Add_New_child/add_new_child.dart';
@@ -40,7 +41,7 @@ class ChildInfoBottomSheet extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 20.0.w, vertical: 15.h),
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey),
+                border: Border.all(color: ColorsManager.med_grey),
                 borderRadius: BorderRadius.circular(8.r),
               ),
               child: Padding(
@@ -63,7 +64,15 @@ class ChildInfoBottomSheet extends StatelessWidget {
                         ),
                       ],
                     ),
-                    VerticalDivider(),
+                    // The VerticalDivider should be wrapped in a SizedBox or Container
+                    SizedBox(
+                      height: 24.h, // Adjust the height as needed
+                      child: VerticalDivider(
+                        color: ColorsManager.med_grey,
+                        thickness: 1,
+                        width: 20.w, // Adds space between the Row items
+                      ),
+                    ),
                     Row(
                       children: [
                         SvgPicture.asset(
@@ -87,10 +96,8 @@ class ChildInfoBottomSheet extends StatelessWidget {
           SizedBox(height: 10.h),
           Row(
             children: [
-              Icon(
-                Icons.lock,
-                size: 18.sp,
-                color: Colors.grey,
+              SvgPicture.asset(
+                AssetsResource.MedicalSVG,
               ),
               SizedBox(width: 10.w),
               TextWidget(
@@ -103,10 +110,8 @@ class ChildInfoBottomSheet extends StatelessWidget {
           SizedBox(height: 10.h),
           Row(
             children: [
-              Icon(
-                Icons.notes,
-                size: 18.sp,
-                color: Colors.grey,
+              SvgPicture.asset(
+                AssetsResource.NoteSVG,
               ),
               SizedBox(width: 10.w),
               TextWidget(

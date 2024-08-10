@@ -1,6 +1,7 @@
 import 'package:amina/Resources/assets_resources.dart';
 import 'package:amina/Resources/color_resources.dart';
 import 'package:amina/Reusable_components/Bottom_Sheets/confirm_bottom_sheet.dart';
+import 'package:amina/Reusable_components/Buttons/Back_Button.dart';
 import 'package:amina/Reusable_components/Buttons/large_button.dart';
 import 'package:amina/Reusable_components/Helper_Widgets/text_widget.dart';
 import 'package:amina/View/Wallet/my_wallet_view.dart';
@@ -21,6 +22,8 @@ class AddToBalanceView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        leading: CustomBackButton(),
         title: TextWidget(text: 'إضافة رصيد', color: Colors.black),
         centerTitle: true,
       ),

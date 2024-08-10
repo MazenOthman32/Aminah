@@ -143,41 +143,54 @@ class DayOrderCard extends StatelessWidget {
                   height: 10.h,
                 ),
                 Divider(),
-                Row(
-                  children: [
-                    SizedBox(
-                      width: 20.w,
-                    ),
-                    SvgPicture.asset(AssetsResource.MapSVG),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => OrderTrackerLocationView(),
-                            ));
-                      },
-                      child: TextWidget(
-                        text: 'تتبع على الخريطة',
-                        color: ColorsManager.black,
-                        fontsize: 14.sp,
+                IntrinsicHeight(
+                  // Added IntrinsicHeight here
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 20.w,
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 40.0.w),
-                      child: VerticalDivider(),
-                    ),
-                    TextButton(
-                      onPressed: () {
-                        communicationButtonSheet(context);
-                      },
-                      child: TextWidget(
-                        text: 'تواصل',
-                        color: ColorsManager.black,
-                        fontsize: 14.sp,
+                      SvgPicture.asset(AssetsResource.MapSVG),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    OrderTrackerLocationView(),
+                              ));
+                        },
+                        child: TextWidget(
+                          text: 'تتبع على الخريطة',
+                          color: ColorsManager.black,
+                          fontsize: 14.sp,
+                        ),
                       ),
-                    ),
-                  ],
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10.0.w),
+                        child: VerticalDivider(
+                          indent: 7,
+                          endIndent: 7,
+                          color: ColorsManager
+                              .med_grey, // Set color for visibility
+                          thickness: 1, // Set thickness
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(right: 25.0.w),
+                        child: TextButton(
+                          onPressed: () {
+                            communicationButtonSheet(context);
+                          },
+                          child: TextWidget(
+                            text: 'تواصل',
+                            color: ColorsManager.black,
+                            fontsize: 14.sp,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),

@@ -1,4 +1,5 @@
 import 'package:amina/Resources/color_resources.dart';
+import 'package:amina/Reusable_components/Buttons/Back_Button.dart';
 import 'package:amina/Reusable_components/Helper_Widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,6 +12,8 @@ class OrderTrackerLocationView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        leading: CustomBackButton(),
         centerTitle: true,
         title: TextWidget(
           text: 'تتبع الجليسة',
@@ -46,7 +49,7 @@ class OrderTrackerLocationView extends StatelessWidget {
                         children: [
                           CircleAvatar(
                             backgroundImage:
-                                AssetImage(AssetsResource.User_Png),
+                                AssetImage(AssetsResource.FarahPng),
                             radius: 24.0.r,
                           ),
                           SizedBox(width: 10.0.w),

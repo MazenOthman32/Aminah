@@ -1,4 +1,5 @@
 import 'package:amina/Resources/color_resources.dart';
+import 'package:amina/Reusable_components/Buttons/Back_Button.dart';
 import 'package:amina/Reusable_components/Helper_Widgets/text_widget.dart';
 import 'package:amina/View/Tameneni/tamenini_button.dart';
 import 'package:amina/View/Tameneni/timer_widget.dart';
@@ -14,6 +15,8 @@ class TameniniOrderDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        leading: CustomBackButton(),
         centerTitle: true,
         title: TextWidget(
           text: 'تتبع الجليسة',
@@ -49,7 +52,7 @@ class TameniniOrderDetails extends StatelessWidget {
                         children: [
                           CircleAvatar(
                             backgroundImage:
-                                AssetImage(AssetsResource.User_Png),
+                                AssetImage(AssetsResource.FarahPng),
                             radius: 24.0.r,
                           ),
                           SizedBox(width: 10.0.w),

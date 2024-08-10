@@ -1,5 +1,6 @@
 import 'package:amina/Resources/assets_resources.dart';
 import 'package:amina/Resources/color_resources.dart';
+import 'package:amina/Reusable_components/Buttons/Back_Button.dart';
 import 'package:amina/View/home/Baby_Sitter_Info/baby_sitter_profile_view.dart';
 import 'package:amina/View/home/Talabaty/childern_section.dart';
 import 'package:amina/View/home/Talabaty/order_tracking_view.dart';
@@ -7,6 +8,7 @@ import 'package:amina/View/home/Talabaty/profile_bottom_sheet.dart';
 import 'package:amina/View/home/Talabaty/report_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../../../Models/day_order_model.dart';
 import '../../../Reusable_components/Helper_Widgets/text_widget.dart';
 import 'comunication_button_sheet.dart';
@@ -30,6 +32,8 @@ class OrderDetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        leading: CustomBackButton(),
         centerTitle: true,
         title: TextWidget(
           text: 'تفاصيل الطلب',
@@ -127,9 +131,9 @@ class OrderDetailsView extends StatelessWidget {
                                       OrderTrackerLocationView(),
                                 ));
                           },
-                          icon: Icon(
-                            Icons.map,
-                            color: ColorsManager.black,
+                          icon: SvgPicture.asset(
+                            AssetsResource.MapSVG,
+                            height: 16.h,
                           ),
                           label: TextWidget(
                             text: 'تبع على الخريطة',

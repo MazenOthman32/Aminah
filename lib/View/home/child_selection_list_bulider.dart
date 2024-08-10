@@ -8,6 +8,8 @@ import 'Childern/child_selection_bottom_sheet.dart';
 
 class SelectedChildrenScreen extends StatelessWidget {
   @override
+  final Widget targetScreen;
+  SelectedChildrenScreen({required this.targetScreen});
   Widget build(BuildContext context) {
     final selectedChildren =
         Provider.of<ChildSelectionViewModel>(context).getSelectedChildren();
@@ -28,7 +30,7 @@ class SelectedChildrenScreen extends StatelessWidget {
                 builder: (context) => ChildSelectionBottomSheet(
                   buttonMessage: 'حفظ',
                   message: 'قم بتحديد أطفالك',
-                  targetScreen: HomeNurseryFormView(),
+                  targetScreen: targetScreen,
                 ),
               ),
             ),
@@ -41,7 +43,7 @@ class SelectedChildrenScreen extends StatelessWidget {
               children: [
                 CircleAvatar(
                   backgroundImage: AssetImage(child.imagePath),
-                  radius: 22.r,
+                  radius: 24.r,
                 ),
                 SizedBox(height: 8.h),
                 Text(child.name),

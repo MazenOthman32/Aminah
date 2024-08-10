@@ -76,7 +76,7 @@ class CurrentSelectedScreen extends StatelessWidget {
       timeTo: 8.30,
       paymentStatus: "تم الدفع",
       paymentAmount: 500,
-      imagePath: AssetsResource.User_Png);
+      imagePath: AssetsResource.FarahPng);
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(

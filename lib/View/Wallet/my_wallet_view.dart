@@ -135,7 +135,6 @@ class _WalletViewState extends State<WalletView>
               Row(
                 children: [
                   Container(
-                    width: 30.w,
                     height: 30.h,
                     decoration: BoxDecoration(
                         color: Color(0xFFf1fafb),
@@ -144,34 +143,34 @@ class _WalletViewState extends State<WalletView>
                   )
                 ],
               ),
-              Row(
-                children: [
-                  Container(
-                    width: 30.w,
-                    height: 30.h,
-                    decoration: BoxDecoration(
-                        color: Color(0xFFf1fafb),
-                        borderRadius: BorderRadius.only(
-                            bottomRight: Radius.circular(12.r))),
-                  )
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              TabBar(
+                isScrollable: true,
+                controller: _tabController,
+                labelColor: Colors.black,
+                unselectedLabelColor: Colors.grey,
+                indicatorColor: ColorsManager.primary,
+                indicatorWeight: 2.0,
+                indicatorPadding: EdgeInsets.only(bottom: 2.0),
+                labelStyle: TextStyle(
+                  fontFamily: FontResources.fontFamily,
+                  fontSize: 14.sp,
+                ),
+                unselectedLabelStyle: TextStyle(
+                  fontFamily: FontResources.fontFamily,
+                  fontSize: 14.sp,
+                ),
+                tabs: [
+                  Tab(text: 'الجميع'),
+                  Tab(text: 'الصادرات'),
+                  Tab(text: 'الواردات'),
                 ],
               ),
             ],
-          ),
-          Padding(
-            padding: EdgeInsets.all(10.r),
-            child: TabBar(
-              labelStyle: TextStyle(fontFamily: FontResources.fontFamily),
-              controller: _tabController,
-              labelColor: Colors.black,
-              unselectedLabelColor: Colors.grey,
-              indicatorColor: ColorsManager.primary,
-              tabs: [
-                Tab(text: 'الجميع'),
-                Tab(text: 'الصادرات'),
-                Tab(text: 'الواردات'),
-              ],
-            ),
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.0.w, vertical: 10.h),
@@ -196,13 +195,22 @@ class _WalletViewState extends State<WalletView>
                       Icon(
                         Icons.arrow_drop_down_rounded,
                         color: Colors.black,
-                      )
+                      ),
                     ],
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: ColorsManager.med_grey,
+                    backgroundColor: Colors
+                        .grey.shade200, // Light grey color similar to the image
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 12.w,
+                        vertical: 8.h), // Adjust padding for better fit
+                    shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.circular(20.r), // Rounded edges
+                    ),
+                    elevation: 0, // Remove shadow for a flat look
                   ),
-                ),
+                )
               ],
             ),
           ),

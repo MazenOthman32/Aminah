@@ -1,6 +1,7 @@
 import 'package:amina/Models/chat_message_model.dart';
 import 'package:amina/Resources/assets_resources.dart';
 import 'package:amina/Resources/font_resources.dart';
+import 'package:amina/Reusable_components/Buttons/Back_Button.dart';
 import 'package:amina/Reusable_components/Helper_Widgets/text_widget.dart';
 import 'package:amina/View_model/chat_message_view_model.dart';
 
@@ -19,10 +20,12 @@ class ChatView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        leading: CustomBackButton(),
         title: Row(
           children: [
             CircleAvatar(
-              child: SvgPicture.asset(AssetsResource.FemaleSVG),
+              backgroundImage: AssetImage(AssetsResource.FarahPng),
             ),
             Column(
               children: [
@@ -124,7 +127,8 @@ class ChatView extends StatelessWidget {
                     }
                   },
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10.0.w),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 5.0.w, vertical: 10.h),
                     child: Container(
                       child: Padding(
                         padding: EdgeInsets.all(5.0.r),
@@ -134,8 +138,8 @@ class ChatView extends StatelessWidget {
                           height: 12.h,
                         ),
                       ),
-                      width: 30.w,
-                      height: 30.h,
+                      width: 35.w,
+                      height: 40.h,
                       decoration: BoxDecoration(
                         color: ColorsManager.primary,
                         borderRadius: BorderRadius.circular(4.r),

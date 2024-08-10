@@ -1,6 +1,7 @@
 import 'package:amina/Models/chat_list_model.dart';
 import 'package:amina/Resources/assets_resources.dart';
 import 'package:amina/Resources/color_resources.dart';
+import 'package:amina/Reusable_components/Buttons/Back_Button.dart';
 import 'package:amina/Reusable_components/Helper_Widgets/text_widget.dart';
 import 'package:amina/View/Tameneni/Chat/chat_view.dart';
 import 'package:amina/View_model/chat_list_view_model.dart';
@@ -16,6 +17,8 @@ class ChatListView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        leading: CustomBackButton(),
         centerTitle: true,
         title: TextWidget(
           text: 'المحادثات',

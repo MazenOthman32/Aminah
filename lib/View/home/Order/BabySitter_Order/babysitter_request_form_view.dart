@@ -1,5 +1,6 @@
 import 'package:amina/Resources/assets_resources.dart';
 import 'package:amina/Resources/font_resources.dart';
+import 'package:amina/Reusable_components/Buttons/Back_Button.dart';
 import 'package:amina/Reusable_components/Buttons/large_button.dart';
 import 'package:amina/Reusable_components/Buttons/radio_button.dart';
 import 'package:amina/Reusable_components/Fields/small_field.dart';
@@ -73,6 +74,8 @@ class BabysitterRequestForm extends StatelessWidget {
       create: (BuildContext context) => HomeViewModel(),
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
+          leading: CustomBackButton(),
           centerTitle: true,
           title: TextWidget(
             text: 'طلب جليسة أطفال',
@@ -96,7 +99,9 @@ class BabysitterRequestForm extends StatelessWidget {
                         fontFamily: FontResources.fontFamily,
                         fontSize: 14.sp,
                       ),
-                      border: OutlineInputBorder(),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
                     ),
                     onChanged: (value) {
                       viewModel.setNeighborhood(value);
@@ -181,8 +186,10 @@ class BabysitterRequestForm extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 100.h, // Adjust the height as needed
-                    child: SelectedChildrenScreen(),
+                    height: 85.h, // Adjust the height as needed
+                    child: SelectedChildrenScreen(
+                      targetScreen: BabysitterRequestForm(),
+                    ),
                   ),
                   SizedBox(height: 16.h),
                   Divider(
