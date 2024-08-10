@@ -170,9 +170,8 @@ class DayOrderCard extends StatelessWidget {
                         child: VerticalDivider(
                           indent: 7,
                           endIndent: 7,
-                          color: ColorsManager
-                              .med_grey, // Set color for visibility
-                          thickness: 1, // Set thickness
+                          color: ColorsManager.med_grey,
+                          thickness: 1,
                         ),
                       ),
                       Padding(
