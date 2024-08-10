@@ -144,7 +144,6 @@ class DayOrderCard extends StatelessWidget {
                 ),
                 Divider(),
                 IntrinsicHeight(
-                  // Added IntrinsicHeight here
                   child: Row(
                     children: [
                       SizedBox(

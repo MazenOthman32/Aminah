@@ -234,43 +234,45 @@ class CurrentSelectedScreen extends StatelessWidget {
                             height: 10.h,
                           ),
                           Divider(),
-                          Row(
-                            children: [
-                              SizedBox(
-                                width: 20.w,
-                              ),
-                              SvgPicture.asset(AssetsResource.MapSVG),
-                              TextButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) =>
-                                            OrderTrackerLocationView(),
-                                      ));
-                                },
-                                child: TextWidget(
-                                  text: 'تتبع على الخريطة',
-                                  color: ColorsManager.black,
-                                  fontsize: 14.sp,
+                          IntrinsicHeight(
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                  width: 20.w,
                                 ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsets.symmetric(horizontal: 40.0.w),
-                                child: VerticalDivider(),
-                              ),
-                              TextButton(
-                                onPressed: () {
-                                  communicationButtonSheet(context);
-                                },
-                                child: TextWidget(
-                                  text: 'تواصل',
-                                  color: ColorsManager.black,
-                                  fontsize: 14.sp,
+                                SvgPicture.asset(AssetsResource.MapSVG),
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              OrderTrackerLocationView(),
+                                        ));
+                                  },
+                                  child: TextWidget(
+                                    text: 'تتبع على الخريطة',
+                                    color: ColorsManager.black,
+                                    fontsize: 14.sp,
+                                  ),
                                 ),
-                              ),
-                            ],
+                                Padding(
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 20.0.w),
+                                  child: VerticalDivider(),
+                                ),
+                                TextButton(
+                                  onPressed: () {
+                                    communicationButtonSheet(context);
+                                  },
+                                  child: TextWidget(
+                                    text: 'تواصل',
+                                    color: ColorsManager.black,
+                                    fontsize: 14.sp,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),

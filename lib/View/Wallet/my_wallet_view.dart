@@ -9,7 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'transactions.dart';
-import 'user_balance_view.dart';
 
 class WalletView extends StatefulWidget {
   @override
@@ -54,7 +53,6 @@ class _WalletViewState extends State<WalletView>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Background color to match the image
       body: Column(
         children: [
           SizedBox(height: 20.h),
@@ -137,9 +135,11 @@ class _WalletViewState extends State<WalletView>
                   Container(
                     height: 30.h,
                     decoration: BoxDecoration(
-                        color: Color(0xFFf1fafb),
-                        borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(12.r))),
+                      color: Color(0xFFf1fafb),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(12.r),
+                      ),
+                    ),
                   )
                 ],
               ),
@@ -199,16 +199,14 @@ class _WalletViewState extends State<WalletView>
                     ],
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors
-                        .grey.shade200, // Light grey color similar to the image
-                    padding: EdgeInsets.symmetric(
-                        horizontal: 12.w,
-                        vertical: 8.h), // Adjust padding for better fit
+                    backgroundColor: Colors.grey.shade200,
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
                     shape: RoundedRectangleBorder(
                       borderRadius:
                           BorderRadius.circular(20.r), // Rounded edges
                     ),
-                    elevation: 0, // Remove shadow for a flat look
+                    elevation: 0,
                   ),
                 )
               ],
