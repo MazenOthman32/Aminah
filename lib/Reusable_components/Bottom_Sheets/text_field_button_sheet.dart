@@ -1,5 +1,6 @@
 import 'package:amina/Models/home_nursery_request_model.dart';
 import 'package:amina/View_model/place_order_view_model.dart';
+import 'package:amina/View_model/radio_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -60,11 +61,15 @@ class TextFieldBottomSheet extends StatelessWidget {
                     },
                   ),
                   SizedBox(height: 16.0.h),
-                  Consumer<PlaceOrderViewModel>(
+                  Consumer<RadioButtonViewModel>(
                     builder: (context, viewModel, child) {
                       return LargeButton(
                         onPressed: () {
-                          HomeNurseryRequest(text: viewModel.text);
+                          onTextSubmitted(newText) {
+                            viewModel.setText(newText);
+                          }
+
+                          ;
                           Navigator.pop(context);
                         },
                         text: buttonMessage,

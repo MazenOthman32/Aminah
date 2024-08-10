@@ -145,31 +145,24 @@ class _WalletViewState extends State<WalletView>
               ),
             ],
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              TabBar(
-                isScrollable: true,
-                controller: _tabController,
-                labelColor: Colors.black,
-                unselectedLabelColor: Colors.grey,
-                indicatorColor: ColorsManager.primary,
-                indicatorWeight: 2.0,
-                indicatorPadding: EdgeInsets.only(bottom: 2.0),
-                labelStyle: TextStyle(
-                  fontFamily: FontResources.fontFamily,
-                  fontSize: 14.sp,
-                ),
-                unselectedLabelStyle: TextStyle(
-                  fontFamily: FontResources.fontFamily,
-                  fontSize: 14.sp,
-                ),
-                tabs: [
-                  Tab(text: 'الجميع'),
-                  Tab(text: 'الصادرات'),
-                  Tab(text: 'الواردات'),
-                ],
-              ),
+          TabBar(
+            isScrollable: true,
+            controller: _tabController,
+            labelColor: Colors.black,
+            unselectedLabelColor: Colors.grey,
+            indicatorColor: ColorsManager.primary,
+            labelStyle: TextStyle(
+              fontFamily: FontResources.fontFamily,
+              fontSize: 14.sp,
+            ),
+            unselectedLabelStyle: TextStyle(
+              fontFamily: FontResources.fontFamily,
+              fontSize: 14.sp,
+            ),
+            tabs: [
+              Tab(text: 'الجميع'),
+              Tab(text: 'الصادرات'),
+              Tab(text: 'الواردات'),
             ],
           ),
           Padding(

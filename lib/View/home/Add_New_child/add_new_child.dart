@@ -1,6 +1,7 @@
 import 'package:amina/Resources/assets_resources.dart';
 import 'package:amina/Resources/color_resources.dart';
 import 'package:amina/Reusable_components/Bottom_Sheets/confirm_bottom_sheet.dart';
+import 'package:amina/Reusable_components/Bottom_Sheets/text_field_button_sheet.dart';
 import 'package:amina/Reusable_components/Buttons/Back_Button.dart';
 import 'package:amina/Reusable_components/Buttons/large_button.dart';
 import 'package:amina/Reusable_components/Helper_Widgets/text_widget.dart';
@@ -108,7 +109,20 @@ class AddNewChildView extends StatelessWidget {
                       groupValue: radioViewModel.groupValue,
                       onChanged: radioViewModel.setGroupValue,
                       isSelected: radioViewModel.groupValue == 1,
-                      onSelected: () {},
+                      onSelected: () {
+                        onTextSubmitted(newText) {
+                          radioViewModel.setText(newText);
+                        }
+
+                        ;
+                        showBottomSheet(
+                          context: context,
+                          builder: (context) => TextFieldBottomSheet(
+                              buttonMessage: 'حفظ',
+                              message: "من فضلك قم بكتابة المشاكل الصحية بإبنك",
+                              hintText: "إكتب هنا"),
+                        );
+                      },
                     ),
                     RadioButton(
                       label: 'لا',

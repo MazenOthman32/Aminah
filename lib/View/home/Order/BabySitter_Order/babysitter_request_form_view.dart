@@ -236,7 +236,8 @@ class BabysitterRequestForm extends StatelessWidget {
                         onChanged: radioViewModel.setGroupValue,
                         isSelected: radioViewModel.groupValue == 2,
                         onSelected: () {
-                          text = '';
+                          onTextSubmitted() {}
+                          ;
                           showModalBottomSheet(
                             context: context,
                             builder: (context) => PlaceOrderBottomSheet(),
