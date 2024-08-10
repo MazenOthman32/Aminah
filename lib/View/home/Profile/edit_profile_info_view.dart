@@ -29,7 +29,7 @@ class EditProfileInfoView extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 50.r,
-                backgroundImage: AssetImage(AssetsResource.FarahPng),
+                backgroundImage: AssetImage(AssetsResource.User_Pngit),
               ),
               SizedBox(
                 height: 10.h,
