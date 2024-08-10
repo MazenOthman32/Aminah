@@ -1,4 +1,3 @@
-import 'package:amina/Resources/assets_resources.dart';
 import 'package:amina/Resources/color_resources.dart';
 import 'package:amina/Resources/font_resources.dart';
 import 'package:amina/Reusable_components/Bottom_Sheets/confirm_bottom_sheet.dart';
@@ -9,8 +8,6 @@ import 'package:amina/View_model/rating_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
-
-import 'report_bottom_sheet_agree.dart';
 
 class RatingBottomSheet extends StatelessWidget {
   @override

@@ -27,7 +27,7 @@ class RatingSelectionView extends StatelessWidget {
         timeTo: 8.30,
         paymentStatus: "تم الدفع",
         paymentAmount: 500,
-        imagePath: AssetsResource.User_Png);
+        imagePath: AssetsResource.FarahPng);
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
