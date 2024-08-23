@@ -18,7 +18,7 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     super.initState();
     Timer(
-      const Duration(seconds: 7),
+      const Duration(seconds: 2),
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -39,18 +39,10 @@ class _SplashViewState extends State<SplashView> {
             children: [
               const SizedBox(),
               Lottie.asset(
-                AssetsResource.LogoLottie,
+                AssetsResource.LogoLottieEdit,
                 width: 300.w,
                 height: 300.h,
               ),
-              Center(
-                child: Padding(
-                  padding: EdgeInsets.only(bottom: 50.h),
-                  child: const CircularProgressIndicator(
-                    color: ColorsManager.primary,
-                  ),
-                ),
-              )
             ],
           ),
         ),
@@ -58,3 +50,14 @@ class _SplashViewState extends State<SplashView> {
     );
   }
 }
+
+// Circle Indicator
+/*  Center(
+                child: Padding(
+                  padding: EdgeInsets.only(bottom: 50.h),
+                  child: const CircularProgressIndicator(
+                    color: ColorsManager.primary,
+                  ),
+                ),
+              )
+               */

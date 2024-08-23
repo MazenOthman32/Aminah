@@ -105,18 +105,6 @@ class ChatView extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8.r)),
             child: Row(
               children: [
-                Expanded(
-                  child: TextField(
-                    cursorColor: ColorsManager.black,
-                    controller: _controller,
-                    decoration: InputDecoration(
-                      hintText: 'إكتب رسالتك ..',
-                      hintStyle:
-                          TextStyle(fontFamily: FontResources.fontFamily),
-                    ),
-                  ),
-                ),
-                SizedBox(width: 8.0.w),
                 GestureDetector(
                   onTap: () {
                     if (_controller.text.isNotEmpty) {
@@ -130,23 +118,36 @@ class ChatView extends StatelessWidget {
                     padding:
                         EdgeInsets.symmetric(horizontal: 5.0.w, vertical: 10.h),
                     child: Container(
-                      child: Padding(
-                        padding: EdgeInsets.all(5.0.r),
-                        child: SvgPicture.asset(
-                          AssetsResource.SendSVG,
-                          width: 12.w,
-                          height: 12.h,
-                        ),
+                      child: SvgPicture.asset(
+                        fit: BoxFit.scaleDown,
+                        AssetsResource.SendSVG,
+                        width: 12.w,
+                        height: 12.h,
                       ),
                       width: 35.w,
-                      height: 40.h,
+                      height: 35.h,
                       decoration: BoxDecoration(
                         color: ColorsManager.primary,
                         borderRadius: BorderRadius.circular(4.r),
                       ),
                     ),
                   ),
-                )
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                Expanded(
+                  child: TextField(
+                    cursorColor: ColorsManager.black,
+                    controller: _controller,
+                    decoration: InputDecoration(
+                      hintText: 'إكتب رسالتك ..',
+                      hintStyle:
+                          TextStyle(fontFamily: FontResources.fontFamily),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 8.0.w),
               ],
             ),
           ),

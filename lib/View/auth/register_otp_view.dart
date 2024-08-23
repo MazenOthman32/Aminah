@@ -5,6 +5,7 @@ import 'package:amina/Reusable_components/Buttons/large_button.dart';
 import 'package:amina/Reusable_components/Helper_Widgets/text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 import '../../Reusable_components/Fields/otp_pin_field.dart';
 import '../../View_model/otp_view_model.dart';
@@ -29,15 +30,19 @@ class RegisterOtpView extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                CircleAvatar(
-                  child: CircleAvatar(
-                    radius: 10.r,
-                    backgroundImage: AssetImage(AssetsResource.EmailPng),
+                Container(
+                  height: 40.h,
+                  width: 40.w,
+                  decoration: BoxDecoration(
+                    color: ColorsManager.OfWhite,
+                    shape: BoxShape.circle,
                   ),
-                  radius: 22.r,
-                  backgroundColor: ColorsManager.OfWhite,
+                  child: SvgPicture.asset(
+                    AssetsResource.EmailSVG, // Ensure this path is correct
+                    fit: BoxFit.scaleDown, // This might help in some cases
+                  ),
                 ),
-                SizedBox(height: 24.h),
+                SizedBox(height: 16.h),
                 TextWidget(
                   text: StringsManager.FillTheOTP,
                   color: ColorsManager.black,

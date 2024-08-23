@@ -6,7 +6,9 @@ class AssetsResource {
   static String ThirdOnBoardingSVG =
       "assets/Images/On_Boarding_SVG/Third_Boarding.svg";
   static String LogoLottie = "assets/Lottie/Aminah_Splash_Screen.json";
+  static String LogoLottieEdit = "assets/Lottie/Aminah_Lottie_Edit.json";
   static String LogoSVG = "assets/Images/Logo.svg";
+  static String EmailSVG = "assets/Images/Png/Email.svg";
   static String EmailPng = 'assets/Images/Png/sms.png';
   static String InvalidLottie = 'assets/Lottie/InvalidLottie.json';
   static String TameniniLottie = 'assets/Lottie/TameniniLottie.json';

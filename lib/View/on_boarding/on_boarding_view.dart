@@ -24,17 +24,19 @@ class OnBoardingView extends StatelessWidget {
             appBar: AppBar(
               elevation: 0,
               backgroundColor: ColorsManager.backGroundColor,
-              title: Padding(
-                padding: const EdgeInsets.only(right: 16),
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                      backgroundColor: ColorsManager.primary),
-                  onPressed: () => viewModel.skipMethod(context),
-                  child: const TextWidget(
-                    text: StringsManager.skip,
+              actions: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 16),
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                        backgroundColor: ColorsManager.primary),
+                    onPressed: () => viewModel.skipMethod(context),
+                    child: const TextWidget(
+                      text: StringsManager.skip,
+                    ),
                   ),
                 ),
-              ),
+              ],
             ),
             body: Stack(
               children: [

@@ -86,7 +86,9 @@ Widget _buildRadioTile(
           selectedTileColor: ColorsManager.primary.withOpacity(0.4),
         ),
         Padding(
-          padding: EdgeInsets.only(right: 10.0.w, bottom: 10.w),
+          padding: EdgeInsets.only(
+            right: 10.0.w,
+          ),
           child: TextWidget(
             text: text,
             color: ColorsManager.black,

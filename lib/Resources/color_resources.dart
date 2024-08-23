@@ -11,7 +11,7 @@ class ColorsManager {
   static const Color boardingSliderPointsColor = Color(0xff99dde3);
   static const Color primary = Color(0xff00ABB9);
   static const Color lightPrimary = Color(0xffF6BBD1);
-  static const Color SignInContainerColor = Color(0xffc8dee0);
+  static const Color SignInContainerColor = Color(0xff212121);
   static const Color Secondery = Color(0xffF38193);
   static const Color RateStarsColor = Color(0xffe5a240);
   static const Color AuthDataFieldBorder = Color(0xffDCDCDC);

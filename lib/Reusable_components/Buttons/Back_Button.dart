@@ -12,10 +12,13 @@ class CustomBackButton extends StatelessWidget {
       onTap: () {
         Navigator.pop(context);
       },
-      child: CircleAvatar(
-        child: SvgPicture.asset(AssetsResource.BackArrowSvg),
-        radius: 10.r,
-        backgroundColor: Colors.white,
+      child: Container(
+        height: 10.h,
+        width: 10.w,
+        child: SvgPicture.asset(
+          AssetsResource.BackArrowSvg,
+          fit: BoxFit.scaleDown,
+        ),
       ),
     );
   }

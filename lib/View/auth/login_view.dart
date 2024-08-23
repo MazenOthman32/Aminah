@@ -39,9 +39,10 @@ class LoginView extends StatelessWidget {
                   Container(
                     width: double.infinity,
                     height: 20.h,
-                    margin: EdgeInsets.only(top: 24.h, left: 24.w, right: 24.w),
+                    margin: EdgeInsets.only(top: 16.h, left: 16.w, right: 16.w),
                     decoration: BoxDecoration(
-                      color: ColorsManager.SignInContainerColor,
+                      color:
+                          ColorsManager.SignInContainerColor.withOpacity(0.1),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(12.r),
                         topRight: Radius.circular(12.r),

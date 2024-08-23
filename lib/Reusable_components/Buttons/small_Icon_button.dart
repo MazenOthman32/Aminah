@@ -19,11 +19,13 @@ class SmallIconButton extends StatelessWidget {
       children: [
         ElevatedButton(
           style: ElevatedButton.styleFrom(
+            fixedSize: Size(35.w, 35.h),
             shape: CircleBorder(),
           ),
           onPressed: onTap,
           child: Center(
             child: SvgPicture.asset(
+              fit: BoxFit.scaleDown,
               iconAsset,
               width: 24.w,
               height: 24.h,
@@ -45,7 +47,7 @@ class SmallIconButton extends StatelessWidget {
                 '$iconCount',
                 style: TextStyle(
                   color: ColorsManager.white,
-                  fontSize: 12.sp,
+                  fontSize: 10.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ),
