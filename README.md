@@ -1,6 +1,6 @@
 <p align="center">
   <!-- Replace "screenshots/logo.jpg" with your actual logo or main image -->
-  <img src="screenshots/logo.jpg" alt="Amina Logo" />
+  <img src="screenshots/1.png" alt="Amina Logo" />
 </p>
 
 ## Content
@@ -96,11 +96,13 @@ It provides a smooth experience for both parents and service providers, offering
 ## Screenshots
 
 <!-- Replace these with your actual screenshots -->
-![Screenshot 1](screenshots/1.jpg)
-![Screenshot 2](screenshots/2.jpg)
-![Screenshot 3](screenshots/3.jpg)
-![Screenshot 4](screenshots/4.jpg)
-![Screenshot 5](screenshots/5.jpg)
+![Screenshot 1](screenshots/2.png)
+---
+![Screenshot 2](screenshots/3.png)
+---
+![Screenshot 3](screenshots/4.png)
+---
+![Screenshot 4](screenshots/5.png)
 
 ---
 
